@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, render_template, request, send_from_directory, jsonify
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -11,7 +11,7 @@ load_dotenv()
 
 app = Flask(__name__)
 
-POKAZ_PRZYCISK_TRAS = False
+POKAZ_PRZYCISK_TRAS = True
 PRZYSTANKI = {}
 
 def zaladuj_baze(nazwa_pliku):
@@ -23,10 +23,26 @@ def zaladuj_baze(nazwa_pliku):
 
 PRZYSTANKI.update(zaladuj_baze('baza_bydgoszcz.json'))
 PRZYSTANKI.update(zaladuj_baze('baza_torun.json'))
+WSPOLRZEDNE = zaladuj_baze('wspolrzedne.json')
 
 stacje_pkp_surowe = zaladuj_baze('stacje_kujpom.json')
 for pkp_id, pkp_nazwa in stacje_pkp_surowe.items():
     PRZYSTANKI[f"P{pkp_id}"] = pkp_nazwa
+PRZYSTANKI_PLANER = []
+_dodane_nazwy = set()
+
+for kod, nazwa in PRZYSTANKI.items():
+    nazwa_czysta = nazwa.split('(')[0].strip()
+    miasto = "Bydgoszcz" if kod.startswith('B') else ("Toruń" if kod.startswith('T') else "PKP")
+    pelna_nazwa = f"{nazwa_czysta} ({miasto})"
+    
+    wpis = f"{kod}: {pelna_nazwa}"
+    
+    if pelna_nazwa not in _dodane_nazwy:
+        PRZYSTANKI_PLANER.append(wpis)
+        _dodane_nazwy.add(pelna_nazwa)
+
+PRZYSTANKI_PLANER.sort(key=lambda x: x.split(': ')[1])
 
 UNIKALNE_NAZWY = {'T': set(), 'B': set(), 'P': set()}
 for kod, nazwa in PRZYSTANKI.items():
@@ -42,9 +58,12 @@ UNIKALNE_NAZWY['T'] = sorted(list(UNIKALNE_NAZWY['T']))
 UNIKALNE_NAZWY['B'] = sorted(list(UNIKALNE_NAZWY['B']))
 UNIKALNE_NAZWY['P'] = sorted(list(UNIKALNE_NAZWY['P']))
 
+TRASY_BYDGOSZCZ = zaladuj_baze('trasy_bydgoszcz(objazdy).json')
+TRASY_TORUN = zaladuj_baze('trasy_torun.json')
+
 TRASY = {}
-TRASY.update(zaladuj_baze('trasy_bydgoszcz(objazdy).json'))
-TRASY.update(zaladuj_baze('trasy_torun.json'))
+TRASY.update(TRASY_BYDGOSZCZ)
+TRASY.update(TRASY_TORUN)
 
 PRZYSTANKI_LINIE = {}
 
@@ -295,6 +314,7 @@ def robots():
     response.mimetype = "text/plain"
     return response
 
+
 @app.route('/sitemap.xml')
 def sitemap():
     xml = """<?xml version="1.0" encoding="UTF-8"?>
@@ -308,6 +328,155 @@ def sitemap():
     response = app.make_response(xml)
     response.mimetype = "application/xml"
     return response
+
+@app.route('/api/planer')
+def api_planer():
+    from_place = request.args.get('fromPlace', '').strip()
+    to_place = request.args.get('toPlace', '').strip()
+    date = request.args.get('date', '')
+    time = request.args.get('time', '').strip()
+    
+    if time and len(time.split(':')) == 2:
+        time = f"{time}:00"
+    
+    def resolve_place(place_str):
+        if not place_str:
+            return place_str
+            
+        if ':' in place_str:
+            prefix = place_str.split(':')[0].strip()
+            
+            if ',' in prefix and prefix.replace(',', '').replace('.', '').replace('-', '').isdigit():
+                return prefix
+                
+            mozliwe_klucze = [prefix]
+            if prefix and prefix[0].isalpha():
+                mozliwe_klucze.append(prefix[1:])
+                
+            for klucz in mozliwe_klucze:
+                if klucz in WSPOLRZEDNE:
+                    lat = WSPOLRZEDNE[klucz].get('lat')
+                    lon = WSPOLRZEDNE[klucz].get('lon')
+                    if lat and lon:
+                        return f"{lat},{lon}"
+                    
+        for stop_id, coords in WSPOLRZEDNE.items():
+            nazwy_do_sprawdzenia = [
+                PRZYSTANKI.get(stop_id, ''),
+                PRZYSTANKI.get(f"B{stop_id}", ''),
+                PRZYSTANKI.get(f"T{stop_id}", ''),
+                PRZYSTANKI.get(f"P{stop_id}", '')
+            ]
+            
+            for nazwa_z_bazy in nazwy_do_sprawdzenia:
+                if nazwa_z_bazy:
+                    czysta_nazwa = nazwa_z_bazy.split('(')[0].strip().lower()
+                    czysty_input = place_str.split('(')[0].strip().lower()
+                    
+                    if czysty_input == czysta_nazwa or place_str.lower() == nazwa_z_bazy.lower():
+                        lat = coords.get('lat')
+                        lon = coords.get('lon')
+                        if lat and lon:
+                            return f"{lat},{lon}"
+                            
+        return place_str
+
+    from_coords = resolve_place(from_place)
+    to_coords = resolve_place(to_place)
+
+    if ',' not in from_coords or ',' not in to_coords:
+        return jsonify({
+            'error': {
+                'msg': f"Nie udało się odnaleźć współrzędnych dla podanych lokalizacji. (Skąd: {from_place}, Dokąd: {to_place})"
+            }
+        }), 400
+
+    graphql_query = """
+    query PlanQuery($fromLat: Float!, $fromLon: Float!, $toLat: Float!, $toLon: Float!, $date: String!, $time: String!) {
+      plan(
+        from: { lat: $fromLat, lon: $fromLon }
+        to: { lat: $toLat, lon: $toLon }
+        date: $date
+        time: $time
+        transportModes: [{mode: TRAM}, {mode: BUS}, {mode: RAIL}]
+      ) {
+        itineraries {
+          startTime
+          endTime
+          duration
+          legs {
+            startTime
+            endTime
+            duration
+            mode
+            distance
+            routeShortName: route {
+              shortName
+            }
+            headsign
+            to {
+              name
+            }
+          }
+        }
+      }
+    }
+    """
+
+    from_lat, from_lon = map(float, from_coords.split(','))
+    to_lat, to_lon = map(float, to_coords.split(','))
+
+    variables = {
+        "fromLat": from_lat,
+        "fromLon": from_lon,
+        "toLat": to_lat,
+        "toLon": to_lon,
+        "date": date,
+        "time": time
+    }
+
+    otp_url = os.getenv('OTP_URL', 'http://10.1.3.50:8080')
+    graphql_url = f"{otp_url.rstrip('/')}/otp/routers/default/index/graphql"
+
+    try:
+        print(f"[BiTCityLive] Wysyłam poprawne zapytanie pod: {graphql_url}")
+        resp = requests.post(
+            graphql_url, 
+            json={"query": graphql_query, "variables": variables}, 
+            headers={"Content-Type": "application/json"},
+            timeout=10
+        )
+        
+        if resp.status_code != 200:
+            return jsonify({'error': {'msg': f"Serwer GraphQL zwrócił status {resp.status_code}: {resp.text}"}}), resp.status_code
+        
+        otp_data = resp.json()
+        if "errors" in otp_data:
+            return jsonify({'error': {'msg': otp_data["errors"][0].get("message", "Błąd GraphQL")}}), 400
+            
+        raw_itineraries = otp_data.get("data", {}).get("plan", {}).get("itineraries", [])
+        
+        for itin in raw_itineraries:
+            transit_legs_count = 0
+            for leg in itin.get("legs", []):
+                rsn_obj = leg.get("routeShortName")
+                if isinstance(rsn_obj, dict):
+                    leg["routeShortName"] = rsn_obj.get("shortName", "")
+                
+                if leg.get("mode") != "WALK":
+                    transit_legs_count += 1
+            
+            itin["transfers"] = max(0, transit_legs_count - 1)
+
+        formatted_plan = {
+            "plan": {
+                "itineraries": raw_itineraries
+            }
+        }
+        return jsonify(formatted_plan)
+
+    except Exception as e:
+        return jsonify({'error': {'msg': f"Błąd komunikacji z GraphQL: {str(e)}"}}), 500
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -391,8 +560,11 @@ def index():
                            stop_number=stop_number, 
                            przystanki=PRZYSTANKI, 
                            trasy=TRASY,
+                           trasy_b=TRASY_BYDGOSZCZ,
+                           trasy_t=TRASY_TORUN,
                            matching_stops=matching_stops,
                            unikalne_nazwy=UNIKALNE_NAZWY,
+                           przystanki_planer=PRZYSTANKI_PLANER,
                            pokaż_przycisk_tras=POKAZ_PRZYCISK_TRAS)
 
 if __name__ == '__main__':
