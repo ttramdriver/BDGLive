@@ -79,7 +79,6 @@
         .nav-icons a { color: var(--text-secondary); transition: color 0.2s; }
         .nav-icons a:hover { color: var(--primary-color); }
         
-        /* Zmodyfikowana sekcja tytułu dla podtytułu */
         .nav-title-container { 
             display: flex; 
             flex-direction: column; 
@@ -319,7 +318,6 @@
             </a>
         </div>
         
-        <!-- Dodano kontener na tytuł i podtytuł w nawigacji -->
         <div class="nav-title-container">
             <a href="/" class="brand-link">BiTCityLive</a>
             <span class="nav-subtitle">Komunikacja miejska i podmiejska na żywo</span>
@@ -336,7 +334,6 @@
         <a href="#" class="menu-link" onclick="openTimetablesModal(); toggleMenu();">Rozkłady jazdy</a>
     </div>
 
-    <!-- --- OKNO MODALNE PLANERA TRAS --- -->
     <div id="planner-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-menu-btn" style="color: var(--text-main);" onclick="closePlannerModal()">&times;</button>
@@ -373,7 +370,6 @@
         </div>
     </div>
 
-    <!-- --- OKNO MODALNE Z ROZKŁADAMI JAZDY --- -->
     <div id="timetables-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-menu-btn" style="color: var(--text-main);" onclick="closeTimetablesModal()">&times;</button>
@@ -540,7 +536,6 @@
             menu.classList.toggle('open');
         }
 
-        /* --- LOGIKA DLA MODALI --- */
         function openTimetablesModal() {
             document.getElementById('timetables-modal').style.display = 'flex';
             document.getElementById('modal-city-select').style.display = 'flex';
