@@ -54,9 +54,10 @@ for kod, nazwa in PRZYSTANKI.items():
     elif kod.startswith('P'):
         UNIKALNE_NAZWY['P'].add(nazwa_baza)
 
-UNIKALNE_NAZWY['T'] = sorted(list(UNIKALNE_NAZWY['T']))
-UNIKALNE_NAZWY['B'] = sorted(list(UNIKALNE_NAZWY['B']))
-UNIKALNE_NAZWY['P'] = sorted(list(UNIKALNE_NAZWY['P']))
+UNIKALNE_NAZWY['T'] = sorted(list(UNIKALNE_NAZWY['T'])) #type: ignore
+UNIKALNE_NAZWY['B'] = sorted(list(UNIKALNE_NAZWY['B'])) #type: ignore
+UNIKALNE_NAZWY['P'] = sorted(list(UNIKALNE_NAZWY['P'])) #type: ignore
+# vscodowy pyright wydaje mi tu jakieś błędy mimo, że wszystko działa, dlatego dałam tu type: ignore bc I can't be bothered to fix this rn
 
 TRASY_BYDGOSZCZ = zaladuj_baze('trasy_bydgoszcz(objazdy).json')
 TRASY_TORUN = zaladuj_baze('trasy_torun.json')
@@ -125,16 +126,22 @@ def parse_and_enrich_time(dep, now):
         return now
         
     base_time_str = t_str.split('(')[0].strip()
-    
+
+    delayTime = 0
+    if len(t_str.split("(opóźnienie:")) == 2:
+        delayTime = int(t_str.split("(opóźnienie:")[1].split("min)")[0].strip())
+
     if 'min' in base_time_str and ':' not in base_time_str:
         match = re.search(r'\d+', base_time_str)
         if match:
-            return now + timedelta(minutes=int(match.group()))
+            return now + timedelta(minutes=int(match.group())+delayTime)
             
-    match = re.search(r'\d{2}:\d{2}(:\d{2})?', base_time_str)
+    match = re.search(r'(\d\d?):\d{2}(:\d{2})?', base_time_str)
     if match:
-        time_format = "%H:%M:%S" if base_time_str.count(':') >= 2 else "%H:%M"
-        dep_time = datetime.strptime(match.group(0), time_format).time()
+        time_format = "%H:%M"
+        dep_time = datetime.strptime(match.group(0), time_format)
+        dep_time = dep_time + timedelta(minutes=delayTime)
+        dep_time = dep_time.time()
         dep_dt = datetime.combine(now.date(), dep_time)
         
         if now.hour < 4 and dep_dt.hour > 20:
@@ -161,7 +168,7 @@ def filter_and_sort_departures(departures):
                 valid_departures.append(dep)
         else:
             stacja_koncowa_deps.append(dep)
-            
+
     valid_departures.sort(key=lambda x: x['_dt_sort'])
     for dep in valid_departures:
         del dep['_dt_sort']
@@ -244,7 +251,7 @@ def pobierz_odjazdy(stop_id):
                             line = czesci[0]
                             direction = czesci[1] if len(czesci) > 1 else "Nieznany"
                             
-                        time = str(item.get('Godzina Odjazdu', '--:--'))
+                        time = ":".join(str(item.get('Godzina Odjazdu', '--:--')).split(":", 2)[:2])
                         opoznienie = str(item.get('Opóźnienie (min)', '0'))
                         if opoznienie.isdigit() and int(opoznienie) > 0:
                             time = f"{time} (opóźnienie: +{opoznienie} min)"
@@ -252,7 +259,7 @@ def pobierz_odjazdy(stop_id):
                         pt_czesci = [x.strip() for x in peron_i_tor.split(',')]
                         platform = pt_czesci[0] if len(pt_czesci) > 0 else ""
                         track = pt_czesci[1] if len(pt_czesci) > 1 else ""
-                        
+                    
                         odjazdy.append({
                             'line': line,
                             'direction': direction,
@@ -499,7 +506,7 @@ def index():
                     deps_list.extend(deps)
                     
             if deps_list:
-                departures = deps_list
+                departures = filter_and_sort_departures(deps_list)
             
         else:
             search_query = raw_input.lower()

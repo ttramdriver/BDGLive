@@ -462,8 +462,9 @@
         {% if not stop_number %}
         <div class="instructions">
             <h3>Jak korzystać z systemu?</h3>
-            <p>Zacznij wpisywać nazwę przystanku w odpowiednim mieście, aby zobaczyć podpowiedzi.</p>
-            <p>Możesz również wpisać bezpośrednio numer słupka.</p>
+            <p>Zacznij wpisywać nazwę przystanku w odpowiedniej kategorii, aby zobaczyć podpowiedzi.</p>
+            <p>Możesz również wpisać bezpośrednio numer przystanku, zaczynając go pierwszą literą danej kategorii ("B" dla przystanku MZK Bydgoszcz, "T" dla przystanku MZK Toruń, "P" dla stacji kolejowej), następnie wpisując numer przystanku oraz zakańczając dwukropkiem (przykład: "B13338:").</p>
+            <p>Możesz także łączyć przystanki dodając znak "+" (przykład: "B08085+T31202+P19844:").</p>
         </div>
         {% endif %}
 
@@ -514,7 +515,7 @@
                             </td>
                             {% endif %}
                             
-                            <td data-label="Kierunek">{{ dep.direction }}</td>
+                            <td data-label="Kierunek" class="direction-display">{{ dep.direction }}</td>
                             <td data-label="Odjazd" class="time-display">{{ dep.time }}</td>
                         </tr>
                         {% endfor %}
@@ -531,6 +532,127 @@
     </div>
 
     <script>
+        unifyTime();
+
+        function unifyTime() {
+            const borderTime = 60;
+            const removeTime = -15;
+            const departMsg = "Odjeżdża/Odjechał";
+            const delayMsg = "opóźniony o ok.";
+            let timeList = document.querySelectorAll('.time-display');
+            let timeArray = [...timeList];
+            let directionList = document.querySelectorAll('.direction-display');
+            let directionArray = [...directionList];
+            let trList = document.querySelectorAll('tbody tr');
+            let trArray = [...trList];
+            for(let i = 0; i < trArray.length; i++)
+            {
+                let time = timeArray[i];
+                let direction = directionArray[i];
+                let row = trArray[i];
+                let currentTime = new Date();
+                let currentTimeInMins = currentTime.getHours() * 60 + currentTime.getMinutes();
+                let removed = false;
+                let includesTime = true;
+                let departureTimeInMins = 0;
+
+                if(time.innerText.includes(":"))
+                {
+                    departureTimeInMins = parseInt(time.innerText.split(":")[0]) * 60 + parseInt(time.innerText.split(":")[1].split("(opóźnienie:")[0].trim());
+                }
+                else if(time.innerText.includes("min"))
+                {
+                    departureTimeInMins = parseInt(time.innerText.split("min")[0].trim()) + currentTimeInMins;
+                }
+                else
+                {
+                    includesTime == false;
+                    time.innerText = `${departMsg} (${currentTime.getHours()}:${currentTime.getMinutes()})`;
+                }
+
+                if(time.innerText.split("(opóźnienie:")[1] != undefined 
+                && time.innerText.split("(opóźnienie:")[1] != null 
+                && time.innerText.split("(opóźnienie:")[1] != NaN
+                && includesTime)
+                {    
+                    let delayTimeInMins = parseInt(time.innerText.split("(opóźnienie:")[1].split("min)")[0].trim());
+                    let departureHour = ((departureTimeInMins+delayTimeInMins)-((departureTimeInMins+delayTimeInMins) % 60))/60;
+                    let departureMinute = (departureTimeInMins+delayTimeInMins) % 60;
+
+                    if(parseInt(departureHour) < 10){   departureHour = `0${departureHour}`;    }
+                    if(parseInt(departureMinute) < 10){ departureMinute = `0${departureMinute}`;}
+
+                    if(!(currentTimeInMins > 1200 && departureTimeInMins < 240) && departureTimeInMins - currentTimeInMins + delayTimeInMins < removeTime)
+                    {
+                        row.remove();
+                        removed = true;
+                    }
+                    else if(currentTimeInMins > 1200 && departureTimeInMins < 240){ currentTimeInMins -= 1440;  }
+
+                    if(!removed)
+                    {
+                        if(departureTimeInMins - currentTimeInMins + delayTimeInMins <= 0)
+                        {
+                            if(direction.innerText == "Stacja końcowa")
+                            {
+                                time.innerText = `Kończy bieg (${departureHour}:${departureMinute})`;
+                            }
+                            else
+                            {
+                                time.innerText = `${departMsg} (${departureHour}:${departureMinute})`;
+                            }
+                        }
+                        else if(departureTimeInMins - currentTimeInMins + delayTimeInMins < borderTime)
+                        {
+                            time.innerText = `${departureTimeInMins - currentTimeInMins + delayTimeInMins}min (${delayMsg} ${delayTimeInMins}min)`;
+                        }
+                        else
+                        {
+                            time.innerText = `${departureHour}:${departureMinute} (${delayMsg} ${delayTimeInMins}min)`;
+                        }
+                    }
+                }
+                else if(includesTime)
+                {
+                    let departureHour = (departureTimeInMins-(departureTimeInMins % 60))/60;
+                    let departureMinute = departureTimeInMins % 60;
+
+                    if(parseInt(departureHour) < 10){   departureHour = `0${departureHour}`;    }
+                    if(parseInt(departureMinute) < 10){ departureMinute = `0${departureMinute}`;}
+
+                    if(!(currentTimeInMins > 1200 && departureTimeInMins < 240) && departureTimeInMins - currentTimeInMins < removeTime)
+                    {
+                        row.remove();
+                        removed = true;
+                    }
+                    else if(currentTimeInMins > 1200 && departureTimeInMins < 240){ currentTimeInMins -= 1440;  }
+
+                    if(!removed)
+                    {
+                        if(departureTimeInMins - currentTimeInMins <= 0)
+                        {
+                            if(direction.innerText == "Stacja końcowa")
+                            {
+                                time.innerText = `Kończy bieg (${departureHour}:${departureMinute})`;
+                            }
+                            else
+                            {
+                                time.innerText = `${departMsg} (${departureHour}:${departureMinute})`;
+                            }
+                        }
+                        else if(departureTimeInMins - currentTimeInMins < borderTime)
+                        {
+                            time.innerText = `${departureTimeInMins - currentTimeInMins}min`;
+                        }
+                        else
+                        {
+                            time.innerText = `${departureHour}:${departureMinute}`;
+                        }
+                    }
+                }
+            };
+        }
+
         function toggleMenu() {
             const menu = document.getElementById('side-menu');
             menu.classList.toggle('open');
