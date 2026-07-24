@@ -2,7 +2,7 @@ import csv
 import json
 import os
 
-def generuj_baze_z_gtfs(plik_wejsciowy='stops (1).txt', plik_wyjsciowy='baza_torun.json', prefiks='T'):
+def generuj_baze_z_gtfs(plik_wejsciowy='stops.txt', plik_wyjsciowy='baza_bydgoszcz.json', prefiks='B'):
     przystanki = {}
     
     if not os.path.exists(plik_wejsciowy):
