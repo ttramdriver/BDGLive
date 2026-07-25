@@ -10447,6 +10447,202 @@
                 "kod": "B02044",
                 "nazwa": "Rycerska"
             }
+        ],
+        "Glinki(W)": [
+            {
+                "kod": "B02044",
+                "nazwa": "Rycerska"
+            },
+            {
+                "kod": "B02034",
+                "nazwa": "Dworzec Główny"
+            },
+            {
+                "kod": "B02081",
+                "nazwa": "Królowej Jadwigi/Astoria"
+            },
+            {
+                "kod": "B02058",
+                "nazwa": "Garbary"
+            },
+            {
+                "kod": "B06002",
+                "nazwa": "Rondo Grunwaldzkie"
+            },
+            {
+                "kod": "B09004",
+                "nazwa": "Plac Poznański"
+            },
+            {
+                "kod": "B09007",
+                "nazwa": "Piękna/Szubińska"
+            },
+            {
+                "kod": "B09035",
+                "nazwa": "Solskiego/Kossaka"
+            },
+            {
+                "kod": "B09037",
+                "nazwa": "Solskiego/Bielicka"
+            },
+            {
+                "kod": "B09039",
+                "nazwa": "Solskiego/Ugory"
+            },
+            {
+                "kod": "B10026",
+                "nazwa": "Rondo Kujawskie"
+            },
+            {
+                "kod": "B10093",
+                "nazwa": "Wzgórze Wolności"
+            },
+            {
+                "kod": "B10094",
+                "nazwa": "Trasa Uniwersytecka/Ujejskiego"
+            },
+            {
+                "kod": "B10068",
+                "nazwa": "Cmentarna/Glinki"
+            },
+            {
+                "kod": "B10070",
+                "nazwa": "Cmentarna/Gniewkowska"
+            },
+            {
+                "kod": "B10072",
+                "nazwa": "Cmentarna/Dobrzyńska"
+            },
+            {
+                "kod": "B10074",
+                "nazwa": "Wąbrzeska"
+            },
+            {
+                "kod": "B10073",
+                "nazwa": "Cmentarna/Dobrzyńska"
+            },
+            {
+                "kod": "B10071",
+                "nazwa": "Cmentarna/Gniewkowska"
+            },
+            {
+                "kod": "B10069",
+                "nazwa": "Cmentarna/Glinki"
+            },
+            {
+                "kod": "B10087",
+                "nazwa": "Magnuszewska"
+            },
+            {
+                "kod": "B10060",
+                "nazwa": "Glinki/Stadion BKS Chemik"
+            },
+            {
+                "kod": "B10062",
+                "nazwa": "Glinki/Zajęcza"
+            },
+            {
+                "kod": "B11079",
+                "nazwa": "Glinki"
+            }
+        ],
+        "Rycerska(W)": [
+            {
+                "kod": "B10059",
+                "nazwa": "Glinki/Stadion BKS Chemik"
+            },
+            {
+                "kod": "B10057",
+                "nazwa": "Magnuszewska"
+            },
+            {
+                "kod": "B10055",
+                "nazwa": "Glinki/Zelwerowicza"
+            },
+            {
+                "kod": "B10053",
+                "nazwa": "Glinki/Cmentarna"
+            },
+            {
+                "kod": "B10068",
+                "nazwa": "Cmentarna/Glinki"
+            },
+            {
+                "kod": "B10070",
+                "nazwa": "Cmentarna/Gniewkowska"
+            },
+            {
+                "kod": "B10072",
+                "nazwa": "Cmentarna/Dobrzyńska"
+            },
+            {
+                "kod": "B10074",
+                "nazwa": "Wąbrzeska"
+            },
+            {
+                "kod": "B10073",
+                "nazwa": "Cmentarna/Dobrzyńska"
+            },
+            {
+                "kod": "B10071",
+                "nazwa": "Cmentarna/Gniewkowska"
+            },
+            {
+                "kod": "B10069",
+                "nazwa": "Cmentarna/Glinki"
+            },
+            {
+                "kod": "B10095",
+                "nazwa": "Trasa Uniwersytecka/Ujejskiego"
+            },
+            {
+                "kod": "B10031",
+                "nazwa": "Wzgórze Wolności"
+            },
+            {
+                "kod": "B10015",
+                "nazwa": "Rondo Kujawskie"
+            },
+            {
+                "kod": "B09038",
+                "nazwa": "Solskiego/Ugory"
+            },
+            {
+                "kod": "B09036",
+                "nazwa": "Solskiego/Bielicka"
+            },
+            {
+                "kod": "B09034",
+                "nazwa": "Solskiego/Kossaka"
+            },
+            {
+                "kod": "B09006",
+                "nazwa": "Szubińska/Piękna"
+            },
+            {
+                "kod": "B09003",
+                "nazwa": "Plac Poznański"
+            },
+            {
+                "kod": "B06003",
+                "nazwa": "Rondo Grunwaldzkie"
+            },
+            {
+                "kod": "B02057",
+                "nazwa": "Garbary"
+            },
+            {
+                "kod": "B02047",
+                "nazwa": "Warszawska/Fredry"
+            },
+            {
+                "kod": "B02039",
+                "nazwa": "Dworzec Główny"
+            },
+            {
+                "kod": "B02044",
+                "nazwa": "Rycerska"
+            }
         ]
     },
     "8": {
