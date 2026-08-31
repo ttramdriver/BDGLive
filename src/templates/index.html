@@ -55,7 +55,6 @@
             text-decoration: none;
             font-weight: bold;
             transition: opacity 0.2s;
-            font-size: 1.5em; /* Utrzymano większy font dla tytułu */
         }
         .brand-link:hover {
             opacity: 0.8;
@@ -78,20 +77,7 @@
         .nav-icons { display: flex; gap: 15px; }
         .nav-icons a { color: var(--text-secondary); transition: color 0.2s; }
         .nav-icons a:hover { color: var(--primary-color); }
-        
-        .nav-title-container { 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            letter-spacing: 1px; 
-        }
-        .nav-subtitle {
-            color: var(--text-secondary);
-            font-size: 0.7em;
-            margin-top: 2px;
-            font-weight: normal;
-        }
-
+        .nav-title { font-size: 1.5em; letter-spacing: 1px; }
         .hamburger-btn { background: none; border: none; color: var(--text-main); cursor: pointer; padding: 5px; }
         
         .side-menu {
@@ -128,13 +114,14 @@
             align-items: center;
         }
 
-        .header-container { text-align: center; margin-bottom: 20px; margin-top: 10px; width: 100%; }
+        .header-container { text-align: center; margin-bottom: 40px; margin-top: 10px; width: 100%; }
+        .header-title { font-size: 3em; margin: 0; letter-spacing: 1px; }
+        .header-subtitle { color: var(--text-secondary); font-size: 1.1em; margin-top: 5px; }
 
         .infobox-technical-issues {
-            display: none;
             background-color: var(--alert-color);
             border: 5px solid var(--alert-border-color);
-            margin: 10px auto 0 auto; 
+            margin: 25px auto 0 auto; 
             border-radius: 8px;
             padding: 15px 20px;
             text-align: left;
@@ -212,9 +199,6 @@
             }
             .time-display { font-size: 1.1em; color: var(--primary-color); }
             .line-number { font-size: 1em; padding: 6px 10px; }
-            
-            /* Ukrywamy podtytuł na małych ekranach, żeby nie łamał paska nawigacji */
-            .nav-subtitle { display: none; } 
         }
 
         .matching-stops-container { width: 100%; margin-top: 10px; }
@@ -237,72 +221,24 @@
         .back-btn { background: none; border: none; color: var(--primary-color); cursor: pointer; font-size: 1em; font-weight: bold; }
 
         .itineraries-container { display: flex; flex-direction: column; gap: 15px; margin-top: 20px; }
-        .itinerary-card {
-            background-color: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .itinerary-header {
-            display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 2px solid var(--bg-color);
-            padding-bottom: 10px; margin-bottom: 10px;
-        }
+        .itinerary-card { background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 8px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .itinerary-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--bg-color); padding-bottom: 10px; margin-bottom: 10px; }
         .itinerary-times { font-size: 1.2em; font-weight: bold; color: var(--text-main); }
         .itinerary-meta { color: var(--text-secondary); font-size: 0.9em; }
-        .itinerary-meta span { 
-            background-color: var(--hover-bg); 
-            padding: 4px 8px; 
-            border-radius: 4px; 
-            margin-left: 5px; 
-            white-space: nowrap;
-        }
-
+        .itinerary-meta span { background-color: var(--hover-bg); padding: 4px 8px; border-radius: 4px; margin-left: 5px; white-space: nowrap; }
         .leg { display: flex; align-items: flex-start; margin-bottom: 12px; gap: 10px; }
         .leg:last-child { margin-bottom: 0; }
         .leg-time { font-weight: bold; width: 45px; flex-shrink: 0; color: var(--text-secondary); }
-        .leg-icon { 
-            display: flex; justify-content: center; align-items: center; 
-            width: 30px; height: 30px; border-radius: 50%; color: white; flex-shrink: 0;
-        }
+        .leg-icon { display: flex; justify-content: center; align-items: center; width: 30px; height: 30px; border-radius: 50%; color: white; flex-shrink: 0; }
         .leg-icon.walk { background-color: #888; }
         .leg-icon.transit { background-color: var(--primary-color); }
         .leg-details { flex-grow: 1; line-height: 1.4; color: var(--text-main); }
         .leg-route { font-weight: bold; padding: 2px 6px; border-radius: 4px; background: var(--bg-color); border: 1px solid var(--border-color); }
-        .datetime-inputs {
-            display: flex;
-            gap: 10px;
-        }
-        .datetime-inputs input {
-            flex: 1;
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-size: 1em;
-            box-sizing: border-box;
-        }
-        .datetime-inputs input::-webkit-calendar-picker-indicator {
-            filter: invert(var(--calendar-invert));
-            cursor: pointer;
-        }
-        .submit-planner-btn {
-            width: 100%;
-            padding: 15px;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-        .submit-planner-btn:hover {
-            opacity: 0.9;
-        }
+        
+        .datetime-inputs { display: flex; gap: 10px; }
+        .datetime-inputs input { flex: 1; padding: 12px; border: 1px solid var(--border-color); border-radius: 4px; background-color: var(--bg-color); color: var(--text-main); font-size: 1em; box-sizing: border-box; }
+        .submit-planner-btn { width: 100%; padding: 15px; background-color: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: opacity 0.2s; }
+        .submit-planner-btn:hover { opacity: 0.9; }
     </style>
 </head>
 <body>
@@ -318,12 +254,7 @@
                 </svg>
             </a>
         </div>
-        
-        <div class="nav-title-container">
-            <a href="/" class="brand-link">BiTCityLive</a>
-            <span class="nav-subtitle">Komunikacja miejska i podmiejska na żywo</span>
-        </div>
-        
+        <div class="nav-title"><a href="/" class="brand-link" style="font-size: 1em;">BiTCityLive</a></div>
         <button class="hamburger-btn" onclick="toggleMenu()">
             <svg viewBox="0 0 24 24" width="30" height="30" stroke="currentColor" stroke-width="2" fill="none"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
@@ -331,10 +262,42 @@
 
     <div id="side-menu" class="side-menu">
         <button class="close-menu-btn" onclick="toggleMenu()">&times;</button>
-        <a href="#" class="menu-link" onclick="openPlannerModal(); toggleMenu();">Planer tras(WiP)</a>
+        <a href="#" class="menu-link" onclick="openPlannerModal(); toggleMenu();">Planer tras (WiP)</a>
         <a href="#" class="menu-link" onclick="openTimetablesModal(); toggleMenu();">Rozkłady jazdy</a>
     </div>
 
+    <!-- OKNO MODALNE ROZKŁADÓW JAZDY -->
+    <div id="timetables-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-menu-btn" style="color: var(--text-main);" onclick="closeTimetablesModal()">&times;</button>
+            <h2 style="margin-top: 0; color: var(--primary-color);">Wybierz miasto</h2>
+            
+            <div class="modal-buttons" id="modal-city-select">
+                <button onclick="renderLinie('B')">MZK Bydgoszcz</button>
+                <button onclick="renderLinie('T')">MZK Toruń</button>
+            </div>
+            
+            <div id="modal-browser-content" style="display: none; margin-top: 20px;">
+                <div class="browser-header">
+                    <h3 id="browser-title" style="margin: 0;">Linie dzienne i tramwajowe</h3>
+                    <button type="button" class="back-btn" id="browser-back" onclick="goBack()">&larr; Wróć</button>
+                </div>
+                <div id="browser-inner-content"></div> 
+            </div>
+        </div>
+    </div>
+
+    <!-- OKNO MODALNE PODGLĄDU TRASY KURSU (kliknięcie odjazdu) -->
+    <div id="journey-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-menu-btn" style="color: var(--text-main);" onclick="closeJourneyModal()">&times;</button>
+            <h2 style="margin-top: 0; color: var(--primary-color);" id="journey-title">Trasa kursu</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 20px;" id="journey-subtitle"></p>
+            <div id="journey-timeline" class="route-timeline"></div>
+        </div>
+    </div>
+
+    <!-- OKNO MODALNE PLANERA TRAS -->
     <div id="planner-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-menu-btn" style="color: var(--text-main);" onclick="closePlannerModal()">&times;</button>
@@ -371,39 +334,20 @@
         </div>
     </div>
 
-    <div id="timetables-modal" class="modal-overlay">
-        <div class="modal-content">
-            <button class="close-menu-btn" style="color: var(--text-main);" onclick="closeTimetablesModal()">&times;</button>
-            <h2 style="margin-top: 0; color: var(--primary-color);">Wybierz miasto</h2>
-            
-            <div class="modal-buttons" id="modal-city-select">
-                <button onclick="renderLinie('B')">MZK Bydgoszcz</button>
-                <button onclick="renderLinie('T')">MZK Toruń</button>
-            </div>
-            
-            <div id="modal-browser-content" style="display: none; margin-top: 20px;">
-                <div class="browser-header">
-                    <h3 id="browser-title" style="margin: 0;">Linie dzienne i tramwajowe</h3>
-                    <button type="button" class="back-btn" id="browser-back" onclick="goBack()">&larr; Wróć</button>
-                </div>
-                <div id="browser-inner-content"></div> 
-            </div>
-        </div>
-    </div>
-
     <div class="main-content">
         <header class="header-container">
+            <span class="header-subtitle">Komunikacja miejska i podmiejska na żywo</span>
             <article class="infobox-technical-issues"> 
                  <span class="infobox-technical-issues-title"> 
                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="fill:#ffffff" width="25"> 
                          <path fill-rule="nonzero" d="M256 0c70.69 0 134.69 28.66 181.02 74.98C483.34 121.3 512 185.31 512 256c0 70.69-28.66 134.7-74.98 181.02C390.69 483.34 326.69 512 256 512c-70.69 0-134.69-28.66-181.02-74.98C28.66 390.69 0 326.69 0 256c0-70.69 28.66-134.69 74.98-181.02C121.31 28.66 185.31 0 256 0zm-9.96 161.03c0-4.28.76-8.26 2.27-11.91 1.5-3.63 3.77-6.94 6.79-9.91 3-2.95 6.29-5.2 9.84-6.7 3.57-1.5 7.41-2.28 11.52-2.28 4.12 0 7.96.78 11.49 2.27 3.54 1.51 6.78 3.76 9.75 6.73 2.95 2.97 5.16 6.26 6.64 9.91 1.49 3.63 2.22 7.61 2.22 11.89 0 4.17-.73 8.08-2.21 11.69-1.48 3.6-3.68 6.94-6.65 9.97-2.94 3.03-6.18 5.32-9.72 6.84-3.54 1.51-7.38 2.29-11.52 2.29-4.22 0-8.14-.76-11.75-2.26-3.58-1.51-6.86-3.79-9.83-6.79-2.94-3.02-5.16-6.34-6.63-9.97-1.48-3.62-2.21-7.54-2.21-11.77zm13.4 178.16c-1.11 3.97-3.35 11.76 3.3 11.76 1.44 0 3.27-.81 5.46-2.4 2.37-1.71 5.09-4.31 8.13-7.75 3.09-3.5 6.32-7.65 9.67-12.42 3.33-4.76 6.84-10.22 10.49-16.31.37-.65 1.23-.87 1.89-.48l12.36 9.18c.6.43.73 1.25.35 1.86-5.69 9.88-11.44 18.51-17.26 25.88-5.85 7.41-11.79 13.57-17.8 18.43l-.1.06c-6.02 4.88-12.19 8.55-18.51 11.01-17.58 6.81-45.36 5.7-53.32-14.83-5.02-12.96-.9-27.69 3.06-40.37l19.96-60.44c1.28-4.58 2.89-9.62 3.47-14.33.97-7.87-2.49-12.96-11.06-12.96h-17.45c-.76 0-1.38-.62-1.38-1.38l.08-.48 4.58-16.68c.16-.62.73-1.04 1.35-1.02l89.12-2.79c.76-.03 1.41.57 1.44 1.33l-.07.43-37.76 124.7zm158.3-244.93c-41.39-41.39-98.58-67-161.74-67-63.16 0-120.35 25.61-161.74 67-41.39 41.39-67 98.58-67 161.74 0 63.16 25.61 120.35 67 161.74 41.39 41.39 98.58 67 161.74 67 63.16 0 120.35-25.61 161.74-67 41.39-41.39 67-98.58 67-161.74 0-63.16-25.61-120.35-67-161.74z"/> 
                      </svg><span>UWAGA! Zmiany tras komunikacji miejskiej w Bydgoszczy!</span></span> 
 
-                Od dnia 25.07.2026 r. przez dwa tygodnie (planowo) jest prowadzony kolejny etap remontu rozjazdów na Rondzie Fordońskim.
-                W związku z tym ruch tramwajowy jest wstrzymany na odcinku Rondo Fordońskie - Perłowa. Fragment
-                ten jest obsługiwany przez autobusy zastępcze (linia ZaT8). Zmiany obejmują linie tramwajowe: 4, 6, 8.
+                Od dnia 27.06.2026 r. do połowy sierpnia (planowo) jest prowadzony remont rozjazdów na Rondzie Fordońskim.
+                W związku z tym ruch tramwajowy jest wstrzymany na odcinku Rondo Jagiellonów - Rondo Fordońskie. Fragment
+                ten jest obsługiwany przez autobusy zastępcze (linia ZaT). Zmiany obejmują linie tramwajowe: 3, 4, 5, 6, 8, 10.
                 Więcej informacji na 
-                <a href="https://zdmikp.bydgoszcz.pl/pl/transport/9459-tramwaje-wracaja-na-ulice-jagiellonska-rozpoczyna-sie-kolejny-etap-remontu-torowiska-na-rondzie-fordonskim">stronie ZDMiKP Bydgoszcz</a>.
+                <a href="https://zdmikp.bydgoszcz.pl/pl/drogi-miejskie/9391-rozpoczyna-sie-remont-torowiska-na-rondzie-fordonskim">stronie ZDMiKP Bydgoszcz</a>.
             </article> 
         </header> 
 
@@ -463,9 +407,8 @@
         {% if not stop_number %}
         <div class="instructions">
             <h3>Jak korzystać z systemu?</h3>
-            <p>Zacznij wpisywać nazwę przystanku w odpowiedniej kategorii, aby zobaczyć podpowiedzi.</p>
-            <p>Możesz również wpisać bezpośrednio numer przystanku, zaczynając go pierwszą literą danej kategorii ("B" dla przystanku MZK Bydgoszcz, "T" dla przystanku MZK Toruń, "P" dla stacji kolejowej), następnie wpisując numer przystanku oraz zakańczając dwukropkiem (przykład: "B13338:").</p>
-            <p>Możesz także łączyć przystanki dodając znak "+" (przykład: "B08085+T31202+P19844:").</p>
+            <p>Zacznij wpisywać nazwę przystanku w odpowiednim mieście, aby zobaczyć podpowiedzi.</p>
+            <p>Możesz również wpisać bezpośrednio numer słupka.</p>
         </div>
         {% endif %}
 
@@ -504,7 +447,8 @@
                     </thead>
                     <tbody>
                         {% for dep in departures %}
-                        <tr>
+                        <!-- Dodano obsługę kliknięcia wiersza kursu, aby otworzyć modal z pozostałymi przystankami -->
+                        <tr style="cursor: pointer;" data-line="{{ dep.line }}" data-direction="{{ dep.direction }}" onclick="showJourneyDetails(this.getAttribute('data-line'), this.getAttribute('data-direction'))">
                             <td data-label="{% if stop_number and stop_number.startswith('P') %}Numer pociągu{% else %}Linia{% endif %}">
                                 <span class="line-number">{{ dep.line }}</span>
                             </td>
@@ -516,7 +460,7 @@
                             </td>
                             {% endif %}
                             
-                            <td data-label="Kierunek" class="direction-display">{{ dep.direction }}</td>
+                            <td data-label="Kierunek">{{ dep.direction }}</td>
                             <td data-label="Odjazd" class="time-display">{{ dep.time }}</td>
                         </tr>
                         {% endfor %}
@@ -533,132 +477,12 @@
     </div>
 
     <script>
-        unifyTime();
-
-        function unifyTime() {
-            const borderTime = 60;
-            const removeTime = -15;
-            const departMsg = "Odjeżdża/Odjechał";
-            const delayMsg = "opóźniony o ok.";
-            let timeList = document.querySelectorAll('.time-display');
-            let timeArray = [...timeList];
-            let directionList = document.querySelectorAll('.direction-display');
-            let directionArray = [...directionList];
-            let trList = document.querySelectorAll('tbody tr');
-            let trArray = [...trList];
-            for(let i = 0; i < trArray.length; i++)
-            {
-                let time = timeArray[i];
-                let direction = directionArray[i];
-                let row = trArray[i];
-                let currentTime = new Date();
-                let currentTimeInMins = currentTime.getHours() * 60 + currentTime.getMinutes();
-                let removed = false;
-                let includesTime = true;
-                let departureTimeInMins = 0;
-
-                if(time.innerText.includes(":"))
-                {
-                    departureTimeInMins = parseInt(time.innerText.split(":")[0]) * 60 + parseInt(time.innerText.split(":")[1].split("(opóźnienie:")[0].trim());
-                }
-                else if(time.innerText.includes("min"))
-                {
-                    departureTimeInMins = parseInt(time.innerText.split("min")[0].trim()) + currentTimeInMins;
-                }
-                else
-                {
-                    includesTime == false;
-                    time.innerText = `${departMsg} (${currentTime.getHours()}:${currentTime.getMinutes()})`;
-                }
-
-                if(time.innerText.split("(opóźnienie:")[1] != undefined 
-                && time.innerText.split("(opóźnienie:")[1] != null 
-                && time.innerText.split("(opóźnienie:")[1] != NaN
-                && includesTime)
-                {    
-                    let delayTimeInMins = parseInt(time.innerText.split("(opóźnienie:")[1].split("min)")[0].trim());
-                    let departureHour = ((departureTimeInMins+delayTimeInMins)-((departureTimeInMins+delayTimeInMins) % 60))/60;
-                    let departureMinute = (departureTimeInMins+delayTimeInMins) % 60;
-
-                    if(parseInt(departureHour) < 10){   departureHour = `0${departureHour}`;    }
-                    if(parseInt(departureMinute) < 10){ departureMinute = `0${departureMinute}`;}
-
-                    if(!(currentTimeInMins > 1200 && departureTimeInMins < 240) && departureTimeInMins - currentTimeInMins + delayTimeInMins < removeTime)
-                    {
-                        row.remove();
-                        removed = true;
-                    }
-                    else if(currentTimeInMins > 1200 && departureTimeInMins < 240){ currentTimeInMins -= 1440;  }
-
-                    if(!removed)
-                    {
-                        if(departureTimeInMins - currentTimeInMins + delayTimeInMins <= 0)
-                        {
-                            if(direction.innerText == "Stacja końcowa")
-                            {
-                                time.innerText = `Kończy bieg (${departureHour}:${departureMinute})`;
-                            }
-                            else
-                            {
-                                time.innerText = `${departMsg} (${departureHour}:${departureMinute})`;
-                            }
-                        }
-                        else if(departureTimeInMins - currentTimeInMins + delayTimeInMins < borderTime)
-                        {
-                            time.innerText = `${departureTimeInMins - currentTimeInMins + delayTimeInMins}min (${delayMsg} ${delayTimeInMins}min)`;
-                        }
-                        else
-                        {
-                            time.innerText = `${departureHour}:${departureMinute} (${delayMsg} ${delayTimeInMins}min)`;
-                        }
-                    }
-                }
-                else if(includesTime)
-                {
-                    let departureHour = (departureTimeInMins-(departureTimeInMins % 60))/60;
-                    let departureMinute = departureTimeInMins % 60;
-
-                    if(parseInt(departureHour) < 10){   departureHour = `0${departureHour}`;    }
-                    if(parseInt(departureMinute) < 10){ departureMinute = `0${departureMinute}`;}
-
-                    if(!(currentTimeInMins > 1200 && departureTimeInMins < 240) && departureTimeInMins - currentTimeInMins < removeTime)
-                    {
-                        row.remove();
-                        removed = true;
-                    }
-                    else if(currentTimeInMins > 1200 && departureTimeInMins < 240){ currentTimeInMins -= 1440;  }
-
-                    if(!removed)
-                    {
-                        if(departureTimeInMins - currentTimeInMins <= 0)
-                        {
-                            if(direction.innerText == "Stacja końcowa")
-                            {
-                                time.innerText = `Kończy bieg (${departureHour}:${departureMinute})`;
-                            }
-                            else
-                            {
-                                time.innerText = `${departMsg} (${departureHour}:${departureMinute})`;
-                            }
-                        }
-                        else if(departureTimeInMins - currentTimeInMins < borderTime)
-                        {
-                            time.innerText = `${departureTimeInMins - currentTimeInMins}min`;
-                        }
-                        else
-                        {
-                            time.innerText = `${departureHour}:${departureMinute}`;
-                        }
-                    }
-                }
-            };
-        }
-
         function toggleMenu() {
             const menu = document.getElementById('side-menu');
             menu.classList.toggle('open');
         }
 
+        /* --- LOGIKA DLA MODALI --- */
         function openTimetablesModal() {
             document.getElementById('timetables-modal').style.display = 'flex';
             document.getElementById('modal-city-select').style.display = 'flex';
@@ -686,6 +510,10 @@
 
         function closePlannerModal() {
             document.getElementById('planner-modal').style.display = 'none';
+        }
+
+        function closeJourneyModal() {
+            document.getElementById('journey-modal').style.display = 'none';
         }
 
         function szukajPolaczeniaOTP(e) {
@@ -1127,9 +955,7 @@
                     const inputFormularza = document.getElementById(docelowyInputId);
                     
                     let bezpiecznyKod = przystanek.kod;
-                    if (typeof bezpiecznyKod === 'number') {
-                        bezpiecznyKod = wybraneMiasto + bezpiecznyKod;
-                    } else if (typeof bezpiecznyKod === 'string' && !bezpiecznyKod.startsWith('B') && !bezpiecznyKod.startsWith('T')) {
+                    if (typeof bezpiecznyKod === 'number' || (!String(bezpiecznyKod).startsWith('B') && !String(bezpiecznyKod).startsWith('T'))) {
                         bezpiecznyKod = wybraneMiasto + bezpiecznyKod;
                     }
                     
@@ -1139,6 +965,104 @@
                 
                 timeline.appendChild(div);
             });
+        }
+
+        /* --- NOWA FUNKCJA: PODGLĄD TRASY Z TABELI ODJAZDÓW --- */
+        function showJourneyDetails(line, direction) {
+            // Identyfikujemy aktualny przystanek z pola wyszukiwania
+            const currentStopRaw = "{{ stop_number if stop_number else '' }}".trim();
+            if(!currentStopRaw) return;
+
+            const currentStopIdRaw = currentStopRaw.split(':')[0].trim();
+            const currentStopNameRaw = currentStopRaw.split(': ')[1] ? currentStopRaw.split(': ')[1].trim() : '';
+            const isTrain = currentStopIdRaw.startsWith('P');
+            
+            if (isTrain) {
+                alert("Podgląd trasy dla pociągów nie jest obecnie dostępny.");
+                return;
+            }
+
+            let city = currentStopIdRaw.startsWith('T') ? 'T' : 'B';
+            let trasy = city === 'T' ? trasyTorun : trasyBydgoszcz;
+            
+            let route = trasy[line];
+            if (!route) {
+                // Spróbuj dopasować mimo różnicy w wielkości liter (np. ZAT6 vs ZaT6)
+                let l_upper = line.toUpperCase();
+                let key = Object.keys(trasy).find(k => k.toUpperCase() === l_upper);
+                if(key) route = trasy[key];
+                else {
+                    alert("Brak szczegółów trasy dla linii " + line + " w bazie.");
+                    return;
+                }
+            }
+
+            // Znajdź najbardziej zbliżony kierunek w JSON do tego z API na żywo
+            let bestDir = Object.keys(route).find(k => k.toLowerCase() === direction.toLowerCase());
+            if (!bestDir) {
+                bestDir = Object.keys(route).find(k => k.toLowerCase().includes(direction.toLowerCase()) || direction.toLowerCase().includes(k.toLowerCase()));
+            }
+            if (!bestDir) {
+                bestDir = Object.keys(route)[0]; // Fallback
+            }
+            
+            let allStops = route[bestDir];
+            
+            // Szukamy indeksu obecnego przystanku na trasie (odcinamy zera wiodące lub prefiksy jeśli trzeba)
+            let startIndex = allStops.findIndex(s => {
+                let sc = String(s.kod);
+                if(sc === currentStopIdRaw) return true;
+                if(city + sc === currentStopIdRaw) return true;
+                if(sc.replace(/^0+/, '') === currentStopIdRaw.substring(1).replace(/^0+/, '')) return true;
+                return false;
+            });
+            
+            // Fallback po nazwie, jeśli kod by się nie zgadzał
+            if (startIndex === -1 && currentStopNameRaw) {
+                startIndex = allStops.findIndex(s => s.nazwa.toLowerCase() === currentStopNameRaw.toLowerCase());
+            }
+            
+            if (startIndex === -1) startIndex = 0;
+            
+            // Bierzemy tylko pozostałe przystanki od naszego włącznie
+            let remainingStops = allStops.slice(startIndex);
+            
+            document.getElementById('journey-title').innerText = 'Linia ' + line;
+            document.getElementById('journey-subtitle').innerText = 'Kierunek: ' + bestDir;
+            
+            const timeline = document.getElementById('journey-timeline');
+            timeline.innerHTML = '';
+            
+            remainingStops.forEach((przystanek, index) => {
+                const div = document.createElement('div');
+                div.className = 'route-stop';
+                
+                // Wyróżnij aktualny przystanek
+                if (index === 0) {
+                    div.innerHTML = `<strong>${przystanek.nazwa}</strong> <span style="font-size:0.8em; color:var(--primary-color);">(Twój przystanek)</span>`;
+                } else {
+                    div.innerText = przystanek.nazwa;
+                }
+                
+                // Po kliknięciu w przystanek z listy, przejdź od razu do jego rozkładu!
+                div.onclick = () => {
+                    closeJourneyModal();
+                    const docelowyInputId = city === 'T' ? 'input-torun' : 'input-bydgoszcz';
+                    const inputFormularza = document.getElementById(docelowyInputId);
+                    
+                    let bezpiecznyKod = przystanek.kod;
+                    if (typeof bezpiecznyKod === 'number' || (!String(bezpiecznyKod).startsWith('B') && !String(bezpiecznyKod).startsWith('T'))) {
+                        bezpiecznyKod = city + bezpiecznyKod;
+                    }
+                    
+                    inputFormularza.value = bezpiecznyKod + ': ' + przystanek.nazwa;
+                    inputFormularza.closest('form').submit();
+                };
+                
+                timeline.appendChild(div);
+            });
+
+            document.getElementById('journey-modal').style.display = 'flex';
         }
     </script>
 </body>
