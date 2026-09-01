@@ -88,7 +88,7 @@ def generuj_trasy_gtfs():
 
                 wynik[nazwa_linii][prawdziwy_kierunek] = lista_koncowa
 
-    plik_wyjsciowy = os.path.join(script_dir, 'trasy_bydgoszczv2.json')
+    plik_wyjsciowy = os.path.join(script_dir, 'trasy_bydgoszcz.json')
     with open(plik_wyjsciowy, 'w', encoding='utf-8') as f:
         json.dump(wynik, f, ensure_ascii=False, indent=4)
 

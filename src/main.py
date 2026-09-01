@@ -24,6 +24,8 @@ def zaladuj_baze(nazwa_pliku):
 PRZYSTANKI.update(zaladuj_baze('baza_bydgoszcz.json'))
 PRZYSTANKI.update(zaladuj_baze('baza_torun.json'))
 WSPOLRZEDNE = zaladuj_baze('wspolrzedne.json')
+CZASY_ODCINKOW_TORUN = zaladuj_baze('czasy_odcinkow_torun.json')
+CZASY_ODCINKOW_BYDGOSZCZ = zaladuj_baze('czasy_odcinkow_bydgoszcz.json')
 
 stacje_pkp_surowe = zaladuj_baze('stacje_kujpom.json')
 for pkp_id, pkp_nazwa in stacje_pkp_surowe.items():
@@ -59,7 +61,7 @@ UNIKALNE_NAZWY['B'] = sorted(list(UNIKALNE_NAZWY['B'])) #type: ignore
 UNIKALNE_NAZWY['P'] = sorted(list(UNIKALNE_NAZWY['P'])) #type: ignore
 # vscodowy pyright wydaje mi tu jakieś błędy mimo, że wszystko działa, dlatego dałam tu type: ignore bc I can't be bothered to fix this rn
 
-TRASY_BYDGOSZCZ = zaladuj_baze('trasy_bydgoszcz(objazdy).json')
+TRASY_BYDGOSZCZ = zaladuj_baze('trasy_bydgoszcz.json')
 TRASY_TORUN = zaladuj_baze('trasy_torun.json')
 
 TRASY = {}
@@ -85,7 +87,7 @@ def dodaj_i_znormalizuj_trasy(pliki_trasy, prefix):
                         if wpis not in PRZYSTANKI_LINIE[kod_klucz]:
                             PRZYSTANKI_LINIE[kod_klucz].append(wpis)
 
-dodaj_i_znormalizuj_trasy(['trasy_bydgoszcz(objazdy).json'], 'B')
+dodaj_i_znormalizuj_trasy(['trasy_bydgoszcz.json'], 'B')
 dodaj_i_znormalizuj_trasy(['trasy_torun.json'], 'T')
 
 for kod in PRZYSTANKI_LINIE:
@@ -572,6 +574,8 @@ def index():
                            matching_stops=matching_stops,
                            unikalne_nazwy=UNIKALNE_NAZWY,
                            przystanki_planer=PRZYSTANKI_PLANER,
+                           czasy_b=CZASY_ODCINKOW_BYDGOSZCZ,
+                           czasy_t=CZASY_ODCINKOW_TORUN,
                            pokaż_przycisk_tras=POKAZ_PRZYCISK_TRAS)
 
 if __name__ == '__main__':

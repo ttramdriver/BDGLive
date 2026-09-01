@@ -1010,20 +1010,20 @@
                 "nazwa": "Dachtery/Chemiczna"
             },
             {
-                "kod": "B12096",
-                "nazwa": "Kielecka/Smoleńska"
+                "kod": "B12088",
+                "nazwa": "Nowotoruńska/Kielecka"
             },
             {
-                "kod": "B12097",
-                "nazwa": "Kielecka/Toruńska"
+                "kod": "B99193",
+                "nazwa": "Nowotoruńska/Prezydenta Lecha Kaczyńskiego"
             },
             {
-                "kod": "B12016",
-                "nazwa": "Toruńska/Równa"
+                "kod": "B12009",
+                "nazwa": "Toruńska/Zajezdnia Tramwajowa"
             },
             {
-                "kod": "B99175",
-                "nazwa": "Toruńska/Tor Awaryjny"
+                "kod": "B12019",
+                "nazwa": "Toruńska/Kielecka"
             },
             {
                 "kod": "B07052",
@@ -1104,6 +1104,220 @@
             {
                 "kod": "B08130",
                 "nazwa": "Łoskoń Zajezdnia"
+            }
+        ],
+        "Dworzec Leśne": [
+            {
+                "kod": "B08076",
+                "nazwa": "Łoskoń"
+            },
+            {
+                "kod": "B08017",
+                "nazwa": "Bora Komorowskiego/Braci Bażańskich"
+            },
+            {
+                "kod": "B08019",
+                "nazwa": "Bora Komorowskiego/Gieryna"
+            },
+            {
+                "kod": "B08021",
+                "nazwa": "Bora Komorowskiego/Kiedrowskiego"
+            },
+            {
+                "kod": "B08025",
+                "nazwa": "Nad Wisłą"
+            },
+            {
+                "kod": "B08023",
+                "nazwa": "Piłsudskiego/Swobodna"
+            },
+            {
+                "kod": "B08006",
+                "nazwa": "Niepodległości"
+            },
+            {
+                "kod": "B08108",
+                "nazwa": "Andersa/Wolna"
+            },
+            {
+                "kod": "B08053",
+                "nazwa": "Andersa/Kasztelańska"
+            },
+            {
+                "kod": "B08055",
+                "nazwa": "Bajka"
+            },
+            {
+                "kod": "B08057",
+                "nazwa": "Andersa/Kleeberga"
+            },
+            {
+                "kod": "B08059",
+                "nazwa": "Akademicka/Igrzyskowa"
+            },
+            {
+                "kod": "B08083",
+                "nazwa": "Akademicka/Kaliskiego"
+            },
+            {
+                "kod": "B08093",
+                "nazwa": "Przylesie"
+            },
+            {
+                "kod": "B08044",
+                "nazwa": "Centrum Onkologii"
+            },
+            {
+                "kod": "B08050",
+                "nazwa": "Rejewskiego/Auchan"
+            },
+            {
+                "kod": "B07014",
+                "nazwa": "Fordońska/Wiślana"
+            },
+            {
+                "kod": "B07012",
+                "nazwa": "Fordońska/Sochaczewska"
+            },
+            {
+                "kod": "B07001",
+                "nazwa": "Dworzec Wschód"
+            },
+            {
+                "kod": "B12020",
+                "nazwa": "Toruńska/Kielecka"
+            },
+            {
+                "kod": "B12010",
+                "nazwa": "Toruńska/Zajezdnia Tramwajowa"
+            },
+            {
+                "kod": "B12036",
+                "nazwa": "Nowotoruńska/Prezydenta Lecha Kaczyńskiego"
+            },
+            {
+                "kod": "B99194",
+                "nazwa": "Dachtery/Nowotoruńska"
+            },
+            {
+                "kod": "B12089",
+                "nazwa": "Chemiczna/Dachtery"
+            },
+            {
+                "kod": "B11036",
+                "nazwa": "Kapuściska"
+            },
+            {
+                "kod": "B11032",
+                "nazwa": "Wojska Polskiego/Baczyńskiego"
+            },
+            {
+                "kod": "B11028",
+                "nazwa": "Wojska Polskiego/Prezydenta Lecha Kaczyńskiego"
+            },
+            {
+                "kod": "B11008",
+                "nazwa": "Szarych Szeregów"
+            },
+            {
+                "kod": "B11050",
+                "nazwa": "Szpitalna/Łomżyńska"
+            },
+            {
+                "kod": "B11017",
+                "nazwa": "Glinki"
+            },
+            {
+                "kod": "B10061",
+                "nazwa": "Glinki/Zajęcza"
+            },
+            {
+                "kod": "B10059",
+                "nazwa": "Glinki/Stadion BKS Chemik"
+            },
+            {
+                "kod": "B10050",
+                "nazwa": "Magnuszewska/Modrakowa"
+            },
+            {
+                "kod": "B10042",
+                "nazwa": "Wojska Polskiego/Boya-Żeleńskiego"
+            },
+            {
+                "kod": "B10036",
+                "nazwa": "Wojska Polskiego/Ujejskiego"
+            },
+            {
+                "kod": "B10031",
+                "nazwa": "Wzgórze Wolności"
+            },
+            {
+                "kod": "B10016",
+                "nazwa": "Rondo Kujawskie"
+            },
+            {
+                "kod": "B03030",
+                "nazwa": "Rondo Jagiellonów"
+            },
+            {
+                "kod": "B10020",
+                "nazwa": "Plac Kościeleckich"
+            },
+            {
+                "kod": "B03029",
+                "nazwa": "Rondo Jagiellonów"
+            },
+            {
+                "kod": "B02056",
+                "nazwa": "Focha/Opera"
+            },
+            {
+                "kod": "B02057",
+                "nazwa": "Garbary"
+            },
+            {
+                "kod": "B02047",
+                "nazwa": "Warszawska/Fredry"
+            },
+            {
+                "kod": "B02034",
+                "nazwa": "Dworzec Główny"
+            },
+            {
+                "kod": "B02048",
+                "nazwa": "Plac Piastowski"
+            },
+            {
+                "kod": "B02080",
+                "nazwa": "Śniadeckich/Sienkiewicza"
+            },
+            {
+                "kod": "B03019",
+                "nazwa": "Gdańska/Cieszkowskiego"
+            },
+            {
+                "kod": "B03044",
+                "nazwa": "Gdańska/Chodkiewicza"
+            },
+            {
+                "kod": "B01045",
+                "nazwa": "Gdańska/Artyleryjska"
+            },
+            {
+                "kod": "B01035",
+                "nazwa": "Czerkaska/Gdańska"
+            },
+            {
+                "kod": "B01033",
+                "nazwa": "Sułkowskiego/Czerkaska"
+            },
+            {
+                "kod": "B01028",
+                "nazwa": "Leśne"
+            },
+            {
+                "kod": "B01063",
+                "nazwa": "Dworzec Leśne"
             }
         ]
     },
@@ -1456,20 +1670,20 @@
                 "nazwa": "Wyzwolenia/Derdowskiego"
             },
             {
-                "kod": "B08069",
+                "kod": "B08006",
                 "nazwa": "Niepodległości"
             },
             {
-                "kod": "B08002",
-                "nazwa": "Wyzwolenia/Swobodna"
+                "kod": "B08108",
+                "nazwa": "Andersa/Wolna"
             },
             {
-                "kod": "B07040",
-                "nazwa": "Wyzwolenia/Styki"
+                "kod": "B08105",
+                "nazwa": "Kasztelańska/Andersa"
             },
             {
-                "kod": "B07038",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B07066",
+                "nazwa": "Rondo Buxakowskiego"
             },
             {
                 "kod": "B07036",
@@ -1634,6 +1848,192 @@
             {
                 "kod": "B02001",
                 "nazwa": "Piaski"
+            }
+        ],
+        "Tatrzańskie": [
+            {
+                "kod": "B02001",
+                "nazwa": "Piaski"
+            },
+            {
+                "kod": "B02002",
+                "nazwa": "Smukalska/Błądzimska"
+            },
+            {
+                "kod": "B02004",
+                "nazwa": "Saperów/Kąpielisko"
+            },
+            {
+                "kod": "B02006",
+                "nazwa": "Saperów/Komandosów"
+            },
+            {
+                "kod": "B02008",
+                "nazwa": "Saperów/Czołgistów"
+            },
+            {
+                "kod": "B02010",
+                "nazwa": "Saperów/Zakątek"
+            },
+            {
+                "kod": "B02012",
+                "nazwa": "Saperów/Ludwikowo"
+            },
+            {
+                "kod": "B02014",
+                "nazwa": "Żeglarska/Ludwikowo"
+            },
+            {
+                "kod": "B02033",
+                "nazwa": "Dworzec Główny"
+            },
+            {
+                "kod": "B02059",
+                "nazwa": "Garbary "
+            },
+            {
+                "kod": "B02052",
+                "nazwa": "Plac Teatralny"
+            },
+            {
+                "kod": "B03030",
+                "nazwa": "Rondo Jagiellonów"
+            },
+            {
+                "kod": "B10022",
+                "nazwa": "Plac Kościeleckich"
+            },
+            {
+                "kod": "B03033",
+                "nazwa": "Rondo Jagiellonów"
+            },
+            {
+                "kod": "B03011",
+                "nazwa": "Markwarta/3 Maja"
+            },
+            {
+                "kod": "B03014",
+                "nazwa": "Rondo Ossolińskich"
+            },
+            {
+                "kod": "B03016",
+                "nazwa": "Ogińskiego/Moniuszki"
+            },
+            {
+                "kod": "B03004",
+                "nazwa": "Rondo Wielkopolskie"
+            },
+            {
+                "kod": "B03006",
+                "nazwa": "Powstańców Wielkopolskich/Lelewela"
+            },
+            {
+                "kod": "B04003",
+                "nazwa": "Powstańców Wielkopolskich/Wyszyńskiego"
+            },
+            {
+                "kod": "B04005",
+                "nazwa": "Głowackiego/Gajowa"
+            },
+            {
+                "kod": "B04007",
+                "nazwa": "Głowackiego/Bałtycka"
+            },
+            {
+                "kod": "B04018",
+                "nazwa": "Skłodowskiej Curie/Bałtycka"
+            },
+            {
+                "kod": "B04020",
+                "nazwa": "Skłodowskiej Curie/Łęczycka"
+            },
+            {
+                "kod": "B04036",
+                "nazwa": "Most Kazimierza Wielkiego"
+            },
+            {
+                "kod": "B04040",
+                "nazwa": "Fordońska/Fabryczna"
+            },
+            {
+                "kod": "B04044",
+                "nazwa": "Fordońska/Wyścigowa"
+            },
+            {
+                "kod": "B07001",
+                "nazwa": "Dworzec Wschód"
+            },
+            {
+                "kod": "B07011",
+                "nazwa": "Fordońska/Sochaczewska"
+            },
+            {
+                "kod": "B07013",
+                "nazwa": "Fordońska/Wiślana"
+            },
+            {
+                "kod": "B07048",
+                "nazwa": "Skandynawska/Ikea"
+            },
+            {
+                "kod": "B07049",
+                "nazwa": "Więcka/Łowicka"
+            },
+            {
+                "kod": "B07018",
+                "nazwa": "Łowicka/Szkoła"
+            },
+            {
+                "kod": "B07021",
+                "nazwa": "Tor Regatowy"
+            },
+            {
+                "kod": "B07022",
+                "nazwa": "Witebska/Wschodnia"
+            },
+            {
+                "kod": "B07044",
+                "nazwa": "Brdyujście"
+            },
+            {
+                "kod": "B07045",
+                "nazwa": "Wyszogrodzka/Opalowa"
+            },
+            {
+                "kod": "B07029",
+                "nazwa": "Fordońska/Wyszogrodzka"
+            },
+            {
+                "kod": "B07031",
+                "nazwa": "Dworzec Fordon"
+            },
+            {
+                "kod": "B07035",
+                "nazwa": "Fordońska/Wiadukt"
+            },
+            {
+                "kod": "B07065",
+                "nazwa": "Rondo Buxakowskiego"
+            },
+            {
+                "kod": "B08052",
+                "nazwa": "Andersa/Kasztelańska"
+            },
+            {
+                "kod": "B08109",
+                "nazwa": "Andersa/Wolna"
+            },
+            {
+                "kod": "B08005",
+                "nazwa": "Niepodległości"
+            },
+            {
+                "kod": "B08007",
+                "nazwa": "Wyzwolenia/Derdowskiego"
+            },
+            {
+                "kod": "B08015",
+                "nazwa": "Tatrzańskie"
             }
         ]
     },
@@ -1914,6 +2314,92 @@
                 "nazwa": "Plac Kościeleckich"
             }
         ],
+        "Plac Kościeleckich (z: Rekinowa)": [
+            {
+                "kod": "B05056",
+                "nazwa": "Rekinowa"
+            },
+            {
+                "kod": "B05055",
+                "nazwa": "Kolbego/Wielorybia"
+            },
+            {
+                "kod": "B05053",
+                "nazwa": "Kolbego/Kogucia"
+            },
+            {
+                "kod": "B05086",
+                "nazwa": "Kolbego/Dzięciołowa"
+            },
+            {
+                "kod": "B05080",
+                "nazwa": "Grunwaldzka-Kolbego"
+            },
+            {
+                "kod": "B99191",
+                "nazwa": "Kruszyńska/Podmiejska"
+            },
+            {
+                "kod": "B05075",
+                "nazwa": "Kruszyńska/Sowia"
+            },
+            {
+                "kod": "B05073",
+                "nazwa": "Kruszyńska/Krańcowa"
+            },
+            {
+                "kod": "B05071",
+                "nazwa": "Mińska/Plonowa"
+            },
+            {
+                "kod": "B05069",
+                "nazwa": "Mińska/Studzienna"
+            },
+            {
+                "kod": "B05067",
+                "nazwa": "Dworzec Zachód"
+            },
+            {
+                "kod": "B05043",
+                "nazwa": "Grunwaldzka/Flisacka"
+            },
+            {
+                "kod": "B05093",
+                "nazwa": "Rondo Maczka"
+            },
+            {
+                "kod": "B05041",
+                "nazwa": "Grunwaldzka/Kraszewskiego"
+            },
+            {
+                "kod": "B05039",
+                "nazwa": "Grunwaldzka/Kanałowa"
+            },
+            {
+                "kod": "B06002",
+                "nazwa": "Rondo Grunwaldzkie"
+            },
+            {
+                "kod": "B09002",
+                "nazwa": "Plac Poznański"
+            },
+            {
+                "kod": "B09029",
+                "nazwa": "Nowy Rynek"
+            },
+            {
+                "kod": "B10002",
+                "nazwa": "Zbożowy Rynek"
+            },
+            {
+                "kod": "B03030",
+                "nazwa": "Rondo Jagiellonów"
+            },
+            {
+                "kod": "B10023",
+                "nazwa": "Plac Kościeleckich"
+            }
+        ],
         "Rekinowa": [
             {
                 "kod": "B10023",
@@ -2042,24 +2528,8 @@
                 "nazwa": "Kruszyńska/Sowia"
             },
             {
-                "kod": "B99189",
-                "nazwa": "Podmiejska/Kruszyńska"
-            },
-            {
-                "kod": "B05059",
-                "nazwa": "Srebrna/Stalowa"
-            },
-            {
-                "kod": "B05061",
-                "nazwa": "Srebrna/Spiżowa"
-            },
-            {
-                "kod": "B05063",
-                "nazwa": "Spiżowa/Ołowiana"
-            },
-            {
-                "kod": "B05064",
-                "nazwa": "Niklowa"
+                "kod": "B99192",
+                "nazwa": "Kruszyńska/Podmiejska"
             },
             {
                 "kod": "B05051",
@@ -2158,20 +2628,20 @@
                 "nazwa": "Toruńska/Łuczniczki"
             },
             {
-                "kod": "B12006",
-                "nazwa": "Kazimierza Wielkiego/Toruńska"
+                "kod": "B12005",
+                "nazwa": "Toruńska/Kazimierza Wielkiego"
             },
             {
-                "kod": "B12036",
-                "nazwa": "Nowotoruńska/Prezydenta Lecha Kaczyńskiego"
+                "kod": "B12009",
+                "nazwa": "Toruńska/Zajezdnia Tramwajowa"
             },
             {
-                "kod": "B12096",
-                "nazwa": "Kielecka/Smoleńska"
+                "kod": "B12015",
+                "nazwa": "Toruńska/Równa"
             },
             {
-                "kod": "B12097",
-                "nazwa": "Kielecka/Toruńska"
+                "kod": "B12019",
+                "nazwa": "Toruńska/Kielecka"
             },
             {
                 "kod": "B99017",
@@ -2288,16 +2758,20 @@
                 "nazwa": "Toruńska/Sporna"
             },
             {
-                "kod": "B99176",
-                "nazwa": "Kielecka/Toruńska"
+                "kod": "B12020",
+                "nazwa": "Toruńska/Kielecka"
             },
             {
-                "kod": "B12095",
-                "nazwa": "Kielecka/Smoleńska"
+                "kod": "B12016",
+                "nazwa": "Toruńska/Równa"
             },
             {
-                "kod": "B99092",
-                "nazwa": "Toruńska/Kazimierza Wielkiego"
+                "kod": "B12010",
+                "nazwa": "Toruńska/Zajezdnia Tramwajowa"
+            },
+            {
+                "kod": "B12006",
+                "nazwa": "Kazimierza Wielkiego/Toruńska"
             },
             {
                 "kod": "B11048",
@@ -2398,84 +2872,6 @@
         ]
     },
     "4": {
-        "Glinki": [
-            {
-                "kod": "B03052",
-                "nazwa": "Bielawy/Peron 1"
-            },
-            {
-                "kod": "B03050",
-                "nazwa": "Chodkiewicza/Lelewela"
-            },
-            {
-                "kod": "B03048",
-                "nazwa": "UKW"
-            },
-            {
-                "kod": "B03046",
-                "nazwa": "Chodkiewicza/Paderewskiego"
-            },
-            {
-                "kod": "B03043",
-                "nazwa": "Gdańska/Chodkiewicza"
-            },
-            {
-                "kod": "B03020",
-                "nazwa": "Gdańska/Cieszkowskiego"
-            },
-            {
-                "kod": "B03022",
-                "nazwa": "Plac Wolności"
-            },
-            {
-                "kod": "B03024",
-                "nazwa": "Plac Praw Kobiet"
-            },
-            {
-                "kod": "B03026",
-                "nazwa": "Rondo Jagiellonów"
-            },
-            {
-                "kod": "B03037",
-                "nazwa": "Dworzec Autobusowy"
-            },
-            {
-                "kod": "B03042",
-                "nazwa": "Jagiellońska/Łużycka"
-            },
-            {
-                "kod": "B04023",
-                "nazwa": "Rondo Fordońskie"
-            },
-            {
-                "kod": "B11001",
-                "nazwa": "Rondo Toruńskie"
-            },
-            {
-                "kod": "B11039",
-                "nazwa": "Perłowa"
-            },
-            {
-                "kod": "B11011",
-                "nazwa": "Szarych Szeregów"
-            },
-            {
-                "kod": "B11088",
-                "nazwa": "Szarych Szeregów"
-            },
-            {
-                "kod": "B11019",
-                "nazwa": "Szpitalna/Łomżyńska"
-            },
-            {
-                "kod": "B11021",
-                "nazwa": "Szpitalna/Solna"
-            },
-            {
-                "kod": "B11015",
-                "nazwa": "Glinki"
-            }
-        ],
         "Bielawy": [
             {
                 "kod": "B11015",
@@ -2553,6 +2949,84 @@
                 "kod": "B03052",
                 "nazwa": "Bielawy/Peron 1"
             }
+        ],
+        "Glinki": [
+            {
+                "kod": "B03052",
+                "nazwa": "Bielawy/Peron 1"
+            },
+            {
+                "kod": "B03050",
+                "nazwa": "Chodkiewicza/Lelewela"
+            },
+            {
+                "kod": "B03048",
+                "nazwa": "UKW"
+            },
+            {
+                "kod": "B03046",
+                "nazwa": "Chodkiewicza/Paderewskiego"
+            },
+            {
+                "kod": "B03043",
+                "nazwa": "Gdańska/Chodkiewicza"
+            },
+            {
+                "kod": "B03020",
+                "nazwa": "Gdańska/Cieszkowskiego"
+            },
+            {
+                "kod": "B03022",
+                "nazwa": "Plac Wolności"
+            },
+            {
+                "kod": "B03024",
+                "nazwa": "Plac Praw Kobiet"
+            },
+            {
+                "kod": "B03026",
+                "nazwa": "Rondo Jagiellonów"
+            },
+            {
+                "kod": "B03037",
+                "nazwa": "Dworzec Autobusowy"
+            },
+            {
+                "kod": "B03042",
+                "nazwa": "Jagiellońska/Łużycka"
+            },
+            {
+                "kod": "B04023",
+                "nazwa": "Rondo Fordońskie"
+            },
+            {
+                "kod": "B11001",
+                "nazwa": "Rondo Toruńskie"
+            },
+            {
+                "kod": "B11039",
+                "nazwa": "Perłowa"
+            },
+            {
+                "kod": "B11011",
+                "nazwa": "Szarych Szeregów"
+            },
+            {
+                "kod": "B11088",
+                "nazwa": "Szarych Szeregów"
+            },
+            {
+                "kod": "B11019",
+                "nazwa": "Szpitalna/Łomżyńska"
+            },
+            {
+                "kod": "B11021",
+                "nazwa": "Szpitalna/Solna"
+            },
+            {
+                "kod": "B11015",
+                "nazwa": "Glinki"
+            }
         ]
     },
     "40": {
@@ -2602,20 +3076,20 @@
                 "nazwa": "Orląt Lwowskich/Pelplińska"
             },
             {
-                "kod": "B08069",
+                "kod": "B08006",
                 "nazwa": "Niepodległości"
             },
             {
-                "kod": "B08002",
-                "nazwa": "Wyzwolenia/Swobodna"
+                "kod": "B08108",
+                "nazwa": "Andersa/Wolna"
             },
             {
-                "kod": "B07040",
-                "nazwa": "Wyzwolenia/Styki"
+                "kod": "B08105",
+                "nazwa": "Kasztelańska/Andersa"
             },
             {
-                "kod": "B07038",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B07066",
+                "nazwa": "Rondo Buxakowskiego"
             },
             {
                 "kod": "B13020",
@@ -2640,16 +3114,16 @@
                 "nazwa": "Strzyżawa"
             },
             {
-                "kod": "B07037",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B07065",
+                "nazwa": "Rondo Buxakowskiego"
             },
             {
-                "kod": "B07039",
-                "nazwa": "Wyzwolenia/Styki"
+                "kod": "B08052",
+                "nazwa": "Andersa/Kasztelańska"
             },
             {
-                "kod": "B08001",
-                "nazwa": "Wyzwolenia/Swobodna"
+                "kod": "B08109",
+                "nazwa": "Andersa/Wolna"
             },
             {
                 "kod": "B08005",
@@ -2702,20 +3176,20 @@
         ],
         "Ostromecko (z: Niepodległości)": [
             {
-                "kod": "B08069",
+                "kod": "B08006",
                 "nazwa": "Niepodległości"
             },
             {
-                "kod": "B08002",
-                "nazwa": "Wyzwolenia/Swobodna"
+                "kod": "B08108",
+                "nazwa": "Andersa/Wolna"
             },
             {
-                "kod": "B07040",
-                "nazwa": "Wyzwolenia/Styki"
+                "kod": "B08105",
+                "nazwa": "Kasztelańska/Andersa"
             },
             {
-                "kod": "B07038",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B07066",
+                "nazwa": "Rondo Buxakowskiego"
             },
             {
                 "kod": "B13020",
@@ -2740,16 +3214,16 @@
                 "nazwa": "Strzyżawa"
             },
             {
-                "kod": "B07037",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B07065",
+                "nazwa": "Rondo Buxakowskiego"
             },
             {
-                "kod": "B07039",
-                "nazwa": "Wyzwolenia/Styki"
+                "kod": "B08052",
+                "nazwa": "Andersa/Kasztelańska"
             },
             {
-                "kod": "B08001",
-                "nazwa": "Wyzwolenia/Swobodna"
+                "kod": "B08109",
+                "nazwa": "Andersa/Wolna"
             },
             {
                 "kod": "B08005",
@@ -2762,6 +3236,174 @@
         ]
     },
     "41": {
+        "Dobrcz": [
+            {
+                "kod": "B01063",
+                "nazwa": "Dworzec Leśne"
+            },
+            {
+                "kod": "B01032",
+                "nazwa": "Leśne"
+            },
+            {
+                "kod": "B01026",
+                "nazwa": "Modrzewiowa/Gdańska"
+            },
+            {
+                "kod": "B01018",
+                "nazwa": "Las Gdański P+R"
+            },
+            {
+                "kod": "B01068",
+                "nazwa": "Gdańska/Las"
+            },
+            {
+                "kod": "B01070",
+                "nazwa": "Myślęcinek"
+            },
+            {
+                "kod": "B01011",
+                "nazwa": "Gdańska/Jeździecka"
+            },
+            {
+                "kod": "B13054",
+                "nazwa": "Osielsko/Myślęcinek"
+            },
+            {
+                "kod": "B13248",
+                "nazwa": "Osielsko/Dzikiej Gęsi"
+            },
+            {
+                "kod": "B13194",
+                "nazwa": "Osielsko/Kolonijna"
+            },
+            {
+                "kod": "B13196",
+                "nazwa": "Osielsko/Jana Pawła II"
+            },
+            {
+                "kod": "B13250",
+                "nazwa": "Osielsko/Wybudowanie"
+            },
+            {
+                "kod": "B13252",
+                "nazwa": "Żołędowo/Krakowska"
+            },
+            {
+                "kod": "B13254",
+                "nazwa": "Wilcze/Szczecińska"
+            },
+            {
+                "kod": "B13256",
+                "nazwa": "Borówno/Szosa Gdańska"
+            },
+            {
+                "kod": "B13258",
+                "nazwa": "Borówno/Skrzyżowanie"
+            },
+            {
+                "kod": "B13260",
+                "nazwa": "Kusowo/Osiedlowa"
+            },
+            {
+                "kod": "B13262",
+                "nazwa": "Borówno/Lipowa"
+            },
+            {
+                "kod": "B13264",
+                "nazwa": "Borówno/Plaża"
+            },
+            {
+                "kod": "B13266",
+                "nazwa": "Dobrcz/Leśna"
+            },
+            {
+                "kod": "B13268",
+                "nazwa": "Dobrcz/Borówieńska"
+            },
+            {
+                "kod": "B13270",
+                "nazwa": "Dobrcz/Urząd Gminy"
+            }
+        ],
+        "Dworzec Leśne": [
+            {
+                "kod": "B13267",
+                "nazwa": "Dobrcz/Leśna"
+            },
+            {
+                "kod": "B13265",
+                "nazwa": "Borówno/Plaża"
+            },
+            {
+                "kod": "B13263",
+                "nazwa": "Borówno/Lipowa"
+            },
+            {
+                "kod": "B13261",
+                "nazwa": "Kusowo/Osiedlowa"
+            },
+            {
+                "kod": "B13259",
+                "nazwa": "Borówno/Skrzyżowanie"
+            },
+            {
+                "kod": "B13257",
+                "nazwa": "Borówno/Szosa Gdańska"
+            },
+            {
+                "kod": "B13255",
+                "nazwa": "Wilcze/Szczecińska"
+            },
+            {
+                "kod": "B13253",
+                "nazwa": "Żołędowo/Jastrzębia"
+            },
+            {
+                "kod": "B13251",
+                "nazwa": "Osielsko/Wybudowanie"
+            },
+            {
+                "kod": "B13197",
+                "nazwa": "Osielsko/Jana Pawła II"
+            },
+            {
+                "kod": "B13195",
+                "nazwa": "Osielsko/Kolonijna"
+            },
+            {
+                "kod": "B13249",
+                "nazwa": "Osielsko/Dzikiej Gęsi"
+            },
+            {
+                "kod": "B13055",
+                "nazwa": "Osielsko/Myślęcinek"
+            },
+            {
+                "kod": "B01010",
+                "nazwa": "Gdańska/Jeździecka"
+            },
+            {
+                "kod": "B01071",
+                "nazwa": "Myślęcinek"
+            },
+            {
+                "kod": "B01069",
+                "nazwa": "Gdańska/Las"
+            },
+            {
+                "kod": "B01019",
+                "nazwa": "Las Gdański P+R"
+            },
+            {
+                "kod": "B01027",
+                "nazwa": "Modrzewiowa/Gdańska"
+            },
+            {
+                "kod": "B01063",
+                "nazwa": "Dworzec Leśne"
+            }
+        ],
         "Wudzyn": [
             {
                 "kod": "B01063",
@@ -2892,7 +3534,7 @@
                 "nazwa": "Wudzyn"
             }
         ],
-        "Dworzec Leśne": [
+        "Dworzec Leśne (z: Wudzyn I)": [
             {
                 "kod": "B13289",
                 "nazwa": "Wudzyn I"
@@ -3160,6 +3802,92 @@
             {
                 "kod": "B13227",
                 "nazwa": "Kruszyn Krajeński/Świerkowa"
+            },
+            {
+                "kod": "B13247",
+                "nazwa": "Kruszyn Krajeński/Ogrodowa"
+            },
+            {
+                "kod": "B13228",
+                "nazwa": "Kruszyn Krajeński/Kwiatowa"
+            },
+            {
+                "kod": "B13012",
+                "nazwa": "Kruszyn Krajeński/Łąkowa"
+            },
+            {
+                "kod": "B13010",
+                "nazwa": "Kruszyn Krajeński/Słoneczna"
+            },
+            {
+                "kod": "B13229",
+                "nazwa": "Kruszyn Krajeński/Słoneczna 24"
+            },
+            {
+                "kod": "B13230",
+                "nazwa": "Białe Błota/Konarowa"
+            },
+            {
+                "kod": "B13032",
+                "nazwa": "Białe Błota/Modra"
+            },
+            {
+                "kod": "B13030",
+                "nazwa": "Białe Błota/Czekoladowa"
+            },
+            {
+                "kod": "B13028",
+                "nazwa": "Białe Błota/Chlebowa"
+            },
+            {
+                "kod": "B09019",
+                "nazwa": "Błonie"
+            }
+        ],
+        "Błonie (z: Błonie)": [
+            {
+                "kod": "B09019",
+                "nazwa": "Błonie"
+            },
+            {
+                "kod": "B13027",
+                "nazwa": "Białe Błota/Chlebowa"
+            },
+            {
+                "kod": "B13029",
+                "nazwa": "Białe Błota/Czerska"
+            },
+            {
+                "kod": "B13031",
+                "nazwa": "Białe Błota/Modra"
+            },
+            {
+                "kod": "B13033",
+                "nazwa": "Białe Błota/Kruszyńska"
+            },
+            {
+                "kod": "B13193",
+                "nazwa": "Ciele/Myśliwska"
+            },
+            {
+                "kod": "B13293",
+                "nazwa": "Ciele/Gęsia"
+            },
+            {
+                "kod": "B99918",
+                "nazwa": "Kruszyn Krajeński/Zbożowa"
+            },
+            {
+                "kod": "B13121",
+                "nazwa": "Kruszyn Krajeński/Mroźna"
+            },
+            {
+                "kod": "B13344",
+                "nazwa": "Kruszyn Krajeński/Topolowa"
+            },
+            {
+                "kod": "B13345",
+                "nazwa": "Kruszyn Krajeński/Bukszpanowa"
             },
             {
                 "kod": "B13247",
@@ -4687,101 +5415,69 @@
                 "kod": "B04011",
                 "nazwa": "Morska"
             }
-        ],
-        "Skorupki (z: Morska)": [
+        ]
+    },
+    "56": {
+        "Glinki BFM": [
             {
-                "kod": "B04011",
-                "nazwa": "Morska"
+                "kod": "B06036",
+                "nazwa": "Belma"
             },
             {
-                "kod": "B04009",
-                "nazwa": "Bałtycka/Głowackiego"
+                "kod": "B06035",
+                "nazwa": "Łochowska"
             },
             {
-                "kod": "B04017",
-                "nazwa": "Skłodowskiej Curie/Bałtycka"
+                "kod": "B06033",
+                "nazwa": "Nakielska/Lisia"
             },
             {
-                "kod": "B04016",
-                "nazwa": "Skłodowskiej Curie/Gajowa"
+                "kod": "B06031",
+                "nazwa": "Nakielska/Notecka"
             },
             {
-                "kod": "B04014",
-                "nazwa": "Rondo Skrzetuskie"
+                "kod": "B06029",
+                "nazwa": "Nakielska/Tarnowska"
             },
             {
-                "kod": "B04002",
-                "nazwa": "Powstańców Wielkopolskich/Wyszyńskiego"
+                "kod": "B06027",
+                "nazwa": "Nakielska/Iglasta"
             },
             {
-                "kod": "B03007",
-                "nazwa": "Powstańców Wielkopolskich/Lelewela"
+                "kod": "B06026",
+                "nazwa": "Nakielska/Żywiecka"
             },
             {
-                "kod": "B03005",
-                "nazwa": "Rondo Wielkopolskie"
+                "kod": "B06024",
+                "nazwa": "Nakielska/Wiśniowa"
             },
             {
-                "kod": "B03015",
-                "nazwa": "Rondo Ossolińskich"
+                "kod": "B06022",
+                "nazwa": "Nakielska/Pijarów"
             },
             {
-                "kod": "B03035",
-                "nazwa": "Jagiellońska/Piotrowskiego"
+                "kod": "B06020",
+                "nazwa": "Nakielska/Widok"
             },
             {
-                "kod": "B03030",
-                "nazwa": "Rondo Jagiellonów"
+                "kod": "B06041",
+                "nazwa": "Wilczak"
             },
             {
-                "kod": "B10078",
-                "nazwa": "Zbożowy Rynek"
+                "kod": "B06043",
+                "nazwa": "Nakielska/Słoneczna"
             },
             {
-                "kod": "B10001",
-                "nazwa": "Zbożowy Rynek"
+                "kod": "B06014",
+                "nazwa": "Nakielska/Wrzesińska"
             },
             {
-                "kod": "B09028",
-                "nazwa": "Nowy Rynek"
+                "kod": "B06010",
+                "nazwa": "Nakielska/Stawowa"
             },
             {
-                "kod": "B09001",
-                "nazwa": "Plac Poznański"
-            },
-            {
-                "kod": "B09004",
-                "nazwa": "Plac Poznański"
-            },
-            {
-                "kod": "B09007",
-                "nazwa": "Piękna/Szubińska"
-            },
-            {
-                "kod": "B09035",
-                "nazwa": "Solskiego/Kossaka"
-            },
-            {
-                "kod": "B09041",
-                "nazwa": "Skorupki/Czackiego"
-            },
-            {
-                "kod": "B09047",
-                "nazwa": "Skorupki"
-            }
-        ],
-        "Morska (z: Skorupki)": [
-            {
-                "kod": "B09040",
-                "nazwa": "Skorupki/Czackiego"
-            },
-            {
-                "kod": "B09034",
-                "nazwa": "Solskiego/Kossaka"
-            },
-            {
-                "kod": "B09006",
-                "nazwa": "Szubińska/Piękna"
+                "kod": "B06002",
+                "nazwa": "Rondo Grunwaldzkie"
             },
             {
                 "kod": "B09002",
@@ -4796,61 +5492,157 @@
                 "nazwa": "Nowy Rynek"
             },
             {
-                "kod": "B10002",
+                "kod": "B10063",
                 "nazwa": "Zbożowy Rynek"
             },
             {
-                "kod": "B10082",
-                "nazwa": "Zbożowy Rynek"
+                "kod": "B10026",
+                "nazwa": "Rondo Kujawskie"
             },
             {
-                "kod": "B03032",
-                "nazwa": "Rondo Jagiellonów"
+                "kod": "B10032",
+                "nazwa": "Wzgórze Wolności"
             },
             {
-                "kod": "B03011",
-                "nazwa": "Markwarta/3 Maja"
+                "kod": "B10037",
+                "nazwa": "Wojska Polskiego/Ujejskiego"
             },
             {
-                "kod": "B03014",
-                "nazwa": "Rondo Ossolińskich"
+                "kod": "B10041",
+                "nazwa": "Wojska Polskiego/Boya-Żeleńskiego"
             },
             {
-                "kod": "B03016",
-                "nazwa": "Ogińskiego/Moniuszki"
+                "kod": "B10049",
+                "nazwa": "Magnuszewska/Modrakowa"
             },
             {
-                "kod": "B03004",
-                "nazwa": "Rondo Wielkopolskie"
+                "kod": "B10087",
+                "nazwa": "Magnuszewska"
             },
             {
-                "kod": "B03006",
-                "nazwa": "Powstańców Wielkopolskich/Lelewela"
+                "kod": "B10060",
+                "nazwa": "Glinki/Stadion BKS Chemik"
             },
             {
-                "kod": "B04065",
-                "nazwa": "Wyszyńskiego/Powstańców Wielkopolskich"
+                "kod": "B10062",
+                "nazwa": "Glinki/Zajęcza"
             },
             {
-                "kod": "B04015",
-                "nazwa": "Skłodowskiej Curie/Gajowa"
+                "kod": "B11016",
+                "nazwa": "Glinki"
             },
             {
-                "kod": "B04019",
-                "nazwa": "Bałtycka/Skłodowskiej Curie"
+                "kod": "B11022",
+                "nazwa": "Glinki/Polon"
             },
             {
-                "kod": "B04008",
-                "nazwa": "Bałtycka/Głowackiego"
+                "kod": "B11024",
+                "nazwa": "Glinki/Eltra"
             },
             {
-                "kod": "B04011",
-                "nazwa": "Morska"
+                "kod": "B11026",
+                "nazwa": "Glinki BFM"
             }
-        ]
-    },
-    "56": {
-        "Glinki BFM": [
+        ],
+        "Belma": [
+            {
+                "kod": "B10059",
+                "nazwa": "Glinki/Stadion BKS Chemik"
+            },
+            {
+                "kod": "B10058",
+                "nazwa": "Magnuszewska"
+            },
+            {
+                "kod": "B10050",
+                "nazwa": "Magnuszewska/Modrakowa"
+            },
+            {
+                "kod": "B10042",
+                "nazwa": "Wojska Polskiego/Boya-Żeleńskiego"
+            },
+            {
+                "kod": "B10036",
+                "nazwa": "Wojska Polskiego/Ujejskiego"
+            },
+            {
+                "kod": "B10031",
+                "nazwa": "Wzgórze Wolności"
+            },
+            {
+                "kod": "B10016",
+                "nazwa": "Rondo Kujawskie"
+            },
+            {
+                "kod": "B10001",
+                "nazwa": "Zbożowy Rynek"
+            },
+            {
+                "kod": "B09054",
+                "nazwa": "Nowy Rynek"
+            },
+            {
+                "kod": "B09003",
+                "nazwa": "Plac Poznański"
+            },
+            {
+                "kod": "B06001",
+                "nazwa": "Rondo Grunwaldzkie"
+            },
+            {
+                "kod": "B06009",
+                "nazwa": "Nakielska/Stawowa"
+            },
+            {
+                "kod": "B06013",
+                "nazwa": "Nakielska/Wrzesińska"
+            },
+            {
+                "kod": "B06042",
+                "nazwa": "Nakielska/Słoneczna"
+            },
+            {
+                "kod": "B06040",
+                "nazwa": "Wilczak"
+            },
+            {
+                "kod": "B06019",
+                "nazwa": "Nakielska/Widok"
+            },
+            {
+                "kod": "B06021",
+                "nazwa": "Nakielska/Pijarów"
+            },
+            {
+                "kod": "B06023",
+                "nazwa": "Nakielska/Wiśniowa"
+            },
+            {
+                "kod": "B06025",
+                "nazwa": "Nakielska/Żywiecka"
+            },
+            {
+                "kod": "B06028",
+                "nazwa": "Nakielska/Tarnowska"
+            },
+            {
+                "kod": "B06030",
+                "nazwa": "Nakielska/Notecka"
+            },
+            {
+                "kod": "B06032",
+                "nazwa": "Nakielska/Lisia"
+            },
+            {
+                "kod": "B06034",
+                "nazwa": "Łochowska"
+            },
+            {
+                "kod": "B06036",
+                "nazwa": "Belma"
+            }
+        ],
+        "Glinki BFM (z: Belma)": [
             {
                 "kod": "B06036",
                 "nazwa": "Belma"
@@ -4972,7 +5764,7 @@
                 "nazwa": "Glinki BFM"
             }
         ],
-        "Belma": [
+        "Belma (z: Glinki)": [
             {
                 "kod": "B10059",
                 "nazwa": "Glinki/Stadion BKS Chemik"
@@ -5150,6 +5942,10 @@
                 "nazwa": "Stawowa/Władysława IV"
             },
             {
+                "kod": "B09058",
+                "nazwa": "Schulza/Stawowa"
+            },
+            {
                 "kod": "B09013",
                 "nazwa": "Błonie"
             }
@@ -5160,8 +5956,8 @@
                 "nazwa": "Błonie"
             },
             {
-                "kod": "B09056",
-                "nazwa": "Szubińska/Żwirki i Wigury"
+                "kod": "B09057",
+                "nazwa": "Schulza/Stawowa"
             },
             {
                 "kod": "B09059",
@@ -5246,7 +6042,7 @@
         ]
     },
     "58": {
-        "Smukała": [
+        "Piaski": [
             {
                 "kod": "B10021",
                 "nazwa": "Plac Kościeleckich"
@@ -5350,9 +6146,155 @@
             {
                 "kod": "B05001",
                 "nazwa": "Smukała"
+            },
+            {
+                "kod": "B05092",
+                "nazwa": "Smukalska/Baranowskiego nż"
+            },
+            {
+                "kod": "B05090",
+                "nazwa": "Smukalska/Agrestowa"
+            },
+            {
+                "kod": "B05088",
+                "nazwa": "Smukalska/Sanktuarium nż"
+            },
+            {
+                "kod": "B02001",
+                "nazwa": "Piaski"
             }
         ],
         "Plac Kościeleckich": [
+            {
+                "kod": "B02075",
+                "nazwa": "Piaski"
+            },
+            {
+                "kod": "B05087",
+                "nazwa": "Smukalska/Sanktuarium nż"
+            },
+            {
+                "kod": "B05089",
+                "nazwa": "Smukalska/Agrestowa"
+            },
+            {
+                "kod": "B05091",
+                "nazwa": "Smukalska/Baranowskiego nż"
+            },
+            {
+                "kod": "B05001",
+                "nazwa": "Smukała"
+            },
+            {
+                "kod": "B05003",
+                "nazwa": "Opławiec/Biwakowa"
+            },
+            {
+                "kod": "B05005",
+                "nazwa": "Opławiec/Elektrownia"
+            },
+            {
+                "kod": "B05113",
+                "nazwa": "Opławiec/Wycieczkowa"
+            },
+            {
+                "kod": "B05007",
+                "nazwa": "Opławiec/Przedszkole"
+            },
+            {
+                "kod": "B05009",
+                "nazwa": "Opławiec/Meysnera"
+            },
+            {
+                "kod": "B05084",
+                "nazwa": "Opławiec/Soboczyńskiego"
+            },
+            {
+                "kod": "B05012",
+                "nazwa": "Opławiec/Wypoczynkowa"
+            },
+            {
+                "kod": "B05014",
+                "nazwa": "Opławiec/Kolonijna"
+            },
+            {
+                "kod": "B05016",
+                "nazwa": "Opławiec/Koronowska"
+            },
+            {
+                "kod": "B05108",
+                "nazwa": "Siedlecka/Wodociągi"
+            },
+            {
+                "kod": "B05106",
+                "nazwa": "Siedlecka/Łubinowa"
+            },
+            {
+                "kod": "B05104",
+                "nazwa": "Siedlecka/Chmielna"
+            },
+            {
+                "kod": "B05020",
+                "nazwa": "Nad Torem/Chmurna"
+            },
+            {
+                "kod": "B05022",
+                "nazwa": "Nad Torem/Karolewska"
+            },
+            {
+                "kod": "B05024",
+                "nazwa": "Nad Torem/Orlicza"
+            },
+            {
+                "kod": "B05078",
+                "nazwa": "Rondo Maczka"
+            },
+            {
+                "kod": "B05041",
+                "nazwa": "Grunwaldzka/Kraszewskiego"
+            },
+            {
+                "kod": "B05095",
+                "nazwa": "Grunwaldzka/Czarna Droga"
+            },
+            {
+                "kod": "B05039",
+                "nazwa": "Grunwaldzka/Kanałowa"
+            },
+            {
+                "kod": "B06002",
+                "nazwa": "Rondo Grunwaldzkie"
+            },
+            {
+                "kod": "B09002",
+                "nazwa": "Plac Poznański"
+            },
+            {
+                "kod": "B09077",
+                "nazwa": "Grudziądzka/Urząd Miasta"
+            },
+            {
+                "kod": "B09029",
+                "nazwa": "Nowy Rynek"
+            },
+            {
+                "kod": "B10063",
+                "nazwa": "Zbożowy Rynek"
+            },
+            {
+                "kod": "B10082",
+                "nazwa": "Zbożowy Rynek"
+            },
+            {
+                "kod": "B03030",
+                "nazwa": "Rondo Jagiellonów"
+            },
+            {
+                "kod": "B10021",
+                "nazwa": "Plac Kościeleckich"
+            }
+        ],
+        "Plac Kościeleckich (z: Smukała)": [
             {
                 "kod": "B05001",
                 "nazwa": "Smukała"
@@ -5474,121 +6416,7 @@
                 "nazwa": "Plac Kościeleckich"
             }
         ],
-        "Plac Kościeleckich (z: Smukała)": [
-            {
-                "kod": "B05001",
-                "nazwa": "Smukała"
-            },
-            {
-                "kod": "B05003",
-                "nazwa": "Opławiec/Biwakowa"
-            },
-            {
-                "kod": "B05005",
-                "nazwa": "Opławiec/Elektrownia"
-            },
-            {
-                "kod": "B05113",
-                "nazwa": "Opławiec/Wycieczkowa"
-            },
-            {
-                "kod": "B05007",
-                "nazwa": "Opławiec/Przedszkole"
-            },
-            {
-                "kod": "B05009",
-                "nazwa": "Opławiec/Meysnera"
-            },
-            {
-                "kod": "B05084",
-                "nazwa": "Opławiec/Soboczyńskiego"
-            },
-            {
-                "kod": "B05012",
-                "nazwa": "Opławiec/Wypoczynkowa"
-            },
-            {
-                "kod": "B05014",
-                "nazwa": "Opławiec/Kolonijna"
-            },
-            {
-                "kod": "B05016",
-                "nazwa": "Opławiec/Koronowska"
-            },
-            {
-                "kod": "B05108",
-                "nazwa": "Siedlecka/Wodociągi"
-            },
-            {
-                "kod": "B05106",
-                "nazwa": "Siedlecka/Łubinowa"
-            },
-            {
-                "kod": "B05104",
-                "nazwa": "Siedlecka/Chmielna"
-            },
-            {
-                "kod": "B05020",
-                "nazwa": "Nad Torem/Chmurna"
-            },
-            {
-                "kod": "B05022",
-                "nazwa": "Nad Torem/Karolewska"
-            },
-            {
-                "kod": "B05024",
-                "nazwa": "Nad Torem/Orlicza"
-            },
-            {
-                "kod": "B05078",
-                "nazwa": "Rondo Maczka"
-            },
-            {
-                "kod": "B05041",
-                "nazwa": "Grunwaldzka/Kraszewskiego"
-            },
-            {
-                "kod": "B05095",
-                "nazwa": "Grunwaldzka/Czarna Droga"
-            },
-            {
-                "kod": "B05039",
-                "nazwa": "Grunwaldzka/Kanałowa"
-            },
-            {
-                "kod": "B06002",
-                "nazwa": "Rondo Grunwaldzkie"
-            },
-            {
-                "kod": "B09002",
-                "nazwa": "Plac Poznański"
-            },
-            {
-                "kod": "B09077",
-                "nazwa": "Grudziądzka/Urząd Miasta"
-            },
-            {
-                "kod": "B09029",
-                "nazwa": "Nowy Rynek"
-            },
-            {
-                "kod": "B10063",
-                "nazwa": "Zbożowy Rynek"
-            },
-            {
-                "kod": "B10082",
-                "nazwa": "Zbożowy Rynek"
-            },
-            {
-                "kod": "B03030",
-                "nazwa": "Rondo Jagiellonów"
-            },
-            {
-                "kod": "B10021",
-                "nazwa": "Plac Kościeleckich"
-            }
-        ],
-        "Smukała (z: Plac Kościeleckich)": [
+        "Smukała": [
             {
                 "kod": "B10021",
                 "nazwa": "Plac Kościeleckich"
@@ -6479,126 +7307,6 @@
                 "kod": "B02058",
                 "nazwa": "Garbary"
             }
-        ],
-        "Belma": [
-            {
-                "kod": "B02058",
-                "nazwa": "Garbary"
-            },
-            {
-                "kod": "B06001",
-                "nazwa": "Rondo Grunwaldzkie"
-            },
-            {
-                "kod": "B06009",
-                "nazwa": "Nakielska/Stawowa"
-            },
-            {
-                "kod": "B06013",
-                "nazwa": "Nakielska/Wrzesińska"
-            },
-            {
-                "kod": "B06040",
-                "nazwa": "Wilczak"
-            },
-            {
-                "kod": "B06019",
-                "nazwa": "Nakielska/Widok"
-            },
-            {
-                "kod": "B06021",
-                "nazwa": "Nakielska/Pijarów"
-            },
-            {
-                "kod": "B06023",
-                "nazwa": "Nakielska/Wiśniowa"
-            },
-            {
-                "kod": "B06025",
-                "nazwa": "Nakielska/Żywiecka"
-            },
-            {
-                "kod": "B06028",
-                "nazwa": "Nakielska/Tarnowska"
-            },
-            {
-                "kod": "B06030",
-                "nazwa": "Nakielska/Notecka"
-            },
-            {
-                "kod": "B06032",
-                "nazwa": "Nakielska/Lisia"
-            },
-            {
-                "kod": "B06034",
-                "nazwa": "Łochowska"
-            },
-            {
-                "kod": "B06036",
-                "nazwa": "Belma"
-            }
-        ],
-        "Garbary (z: Belma)": [
-            {
-                "kod": "B06036",
-                "nazwa": "Belma"
-            },
-            {
-                "kod": "B06035",
-                "nazwa": "Łochowska"
-            },
-            {
-                "kod": "B06033",
-                "nazwa": "Nakielska/Lisia"
-            },
-            {
-                "kod": "B06031",
-                "nazwa": "Nakielska/Notecka"
-            },
-            {
-                "kod": "B06029",
-                "nazwa": "Nakielska/Tarnowska"
-            },
-            {
-                "kod": "B06027",
-                "nazwa": "Nakielska/Iglasta"
-            },
-            {
-                "kod": "B06026",
-                "nazwa": "Nakielska/Żywiecka"
-            },
-            {
-                "kod": "B06024",
-                "nazwa": "Nakielska/Wiśniowa"
-            },
-            {
-                "kod": "B06022",
-                "nazwa": "Nakielska/Pijarów"
-            },
-            {
-                "kod": "B06020",
-                "nazwa": "Nakielska/Widok"
-            },
-            {
-                "kod": "B06041",
-                "nazwa": "Wilczak"
-            },
-            {
-                "kod": "B06014",
-                "nazwa": "Nakielska/Wrzesińska"
-            },
-            {
-                "kod": "B06010",
-                "nazwa": "Nakielska/Stawowa"
-            },
-            {
-                "kod": "B06003",
-                "nazwa": "Rondo Grunwaldzkie"
-            },
-            {
-                "kod": "B02058",
-                "nazwa": "Garbary"
-            }
         ]
     },
     "64": {
@@ -6962,16 +7670,16 @@
                 "nazwa": "Fordońska/Wiadukt"
             },
             {
-                "kod": "B07037",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B07065",
+                "nazwa": "Rondo Buxakowskiego"
             },
             {
-                "kod": "B07039",
-                "nazwa": "Wyzwolenia/Styki"
+                "kod": "B08052",
+                "nazwa": "Andersa/Kasztelańska"
             },
             {
-                "kod": "B08001",
-                "nazwa": "Wyzwolenia/Swobodna"
+                "kod": "B08109",
+                "nazwa": "Andersa/Wolna"
             },
             {
                 "kod": "B08005",
@@ -6996,20 +7704,20 @@
                 "nazwa": "Piłsudskiego/Swobodna"
             },
             {
-                "kod": "B08069",
+                "kod": "B08006",
                 "nazwa": "Niepodległości"
             },
             {
-                "kod": "B08002",
-                "nazwa": "Wyzwolenia/Swobodna"
+                "kod": "B08108",
+                "nazwa": "Andersa/Wolna"
             },
             {
-                "kod": "B07040",
-                "nazwa": "Wyzwolenia/Styki"
+                "kod": "B08105",
+                "nazwa": "Kasztelańska/Andersa"
             },
             {
-                "kod": "B07038",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B07066",
+                "nazwa": "Rondo Buxakowskiego"
             },
             {
                 "kod": "B07036",
@@ -7202,16 +7910,16 @@
                 "nazwa": "Fordońska/Wiadukt"
             },
             {
-                "kod": "B07037",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B07065",
+                "nazwa": "Rondo Buxakowskiego"
             },
             {
-                "kod": "B07039",
-                "nazwa": "Wyzwolenia/Styki"
+                "kod": "B08052",
+                "nazwa": "Andersa/Kasztelańska"
             },
             {
-                "kod": "B08001",
-                "nazwa": "Wyzwolenia/Swobodna"
+                "kod": "B08109",
+                "nazwa": "Andersa/Wolna"
             },
             {
                 "kod": "B08005",
@@ -7268,20 +7976,20 @@
                 "nazwa": "Piłsudskiego/Swobodna"
             },
             {
-                "kod": "B08069",
+                "kod": "B08006",
                 "nazwa": "Niepodległości"
             },
             {
-                "kod": "B08002",
-                "nazwa": "Wyzwolenia/Swobodna"
+                "kod": "B08108",
+                "nazwa": "Andersa/Wolna"
             },
             {
-                "kod": "B07040",
-                "nazwa": "Wyzwolenia/Styki"
+                "kod": "B08105",
+                "nazwa": "Kasztelańska/Andersa"
             },
             {
-                "kod": "B07038",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B07066",
+                "nazwa": "Rondo Buxakowskiego"
             },
             {
                 "kod": "B07036",
@@ -7418,10 +8126,6 @@
             {
                 "kod": "B02050",
                 "nazwa": "Hetmańska/Kaszubska"
-            },
-            {
-                "kod": "B02079",
-                "nazwa": "Plac Piastowski"
             },
             {
                 "kod": "B02039",
@@ -8200,12 +8904,12 @@
                 "nazwa": "Garbary"
             },
             {
-                "kod": "B02049",
-                "nazwa": "Fredry/Warszawska"
+                "kod": "B02048",
+                "nazwa": "Plac Piastowski"
             },
             {
-                "kod": "B02051",
-                "nazwa": "Mazowiecka/Pomorska"
+                "kod": "B02080",
+                "nazwa": "Śniadeckich/Sienkiewicza"
             },
             {
                 "kod": "B03019",
@@ -8255,218 +8959,6 @@
             },
             {
                 "kod": "B04001",
-                "nazwa": "Powstańców Wielkopolskich/Wyszyńskiego"
-            },
-            {
-                "kod": "B03007",
-                "nazwa": "Powstańców Wielkopolskich/Lelewela"
-            },
-            {
-                "kod": "B03003",
-                "nazwa": "Rondo Wielkopolskie"
-            },
-            {
-                "kod": "B03001",
-                "nazwa": "Mickiewicza/Teatr Polski"
-            },
-            {
-                "kod": "B02050",
-                "nazwa": "Hetmańska/Kaszubska"
-            },
-            {
-                "kod": "B02034",
-                "nazwa": "Dworzec Główny"
-            },
-            {
-                "kod": "B02081",
-                "nazwa": "Królowej Jadwigi/Astoria"
-            },
-            {
-                "kod": "B02058",
-                "nazwa": "Garbary"
-            },
-            {
-                "kod": "B06004",
-                "nazwa": "Rondo Grunwaldzkie"
-            },
-            {
-                "kod": "B05038",
-                "nazwa": "Grunwaldzka/Kanałowa"
-            },
-            {
-                "kod": "B05096",
-                "nazwa": "Grunwaldzka/Czarna Droga"
-            },
-            {
-                "kod": "B05040",
-                "nazwa": "Grunwaldzka/Kraszewskiego"
-            },
-            {
-                "kod": "B05037",
-                "nazwa": "Rondo Maczka"
-            },
-            {
-                "kod": "B05042",
-                "nazwa": "Grunwaldzka/Flisacka"
-            },
-            {
-                "kod": "B05082",
-                "nazwa": "Grunwaldzka/Chojnicka"
-            },
-            {
-                "kod": "B05044",
-                "nazwa": "Grunwaldzka/Filtrowa"
-            },
-            {
-                "kod": "B05048",
-                "nazwa": "Grunwaldzka/Przejście nż"
-            },
-            {
-                "kod": "B05051",
-                "nazwa": "Kolbego/Grunwaldzka"
-            },
-            {
-                "kod": "B05085",
-                "nazwa": "Kolbego/Dzięciołowa"
-            },
-            {
-                "kod": "B05052",
-                "nazwa": "Kolbego/Kogucia"
-            },
-            {
-                "kod": "B05054",
-                "nazwa": "Kolbego/Wielorybia"
-            },
-            {
-                "kod": "B05056",
-                "nazwa": "Rekinowa"
-            }
-        ],
-        "Morska (z: Rekinowa)": [
-            {
-                "kod": "B05056",
-                "nazwa": "Rekinowa"
-            },
-            {
-                "kod": "B05055",
-                "nazwa": "Kolbego/Wielorybia"
-            },
-            {
-                "kod": "B05053",
-                "nazwa": "Kolbego/Kogucia"
-            },
-            {
-                "kod": "B05086",
-                "nazwa": "Kolbego/Dzięciołowa"
-            },
-            {
-                "kod": "B05050",
-                "nazwa": "Grunwaldzka/Kolbego"
-            },
-            {
-                "kod": "B05049",
-                "nazwa": "Grunwaldzka/Przejście nż"
-            },
-            {
-                "kod": "B05045",
-                "nazwa": "Grunwaldzka/Filtrowa"
-            },
-            {
-                "kod": "B05043",
-                "nazwa": "Grunwaldzka/Flisacka"
-            },
-            {
-                "kod": "B05093",
-                "nazwa": "Rondo Maczka"
-            },
-            {
-                "kod": "B05041",
-                "nazwa": "Grunwaldzka/Kraszewskiego"
-            },
-            {
-                "kod": "B05095",
-                "nazwa": "Grunwaldzka/Czarna Droga"
-            },
-            {
-                "kod": "B05039",
-                "nazwa": "Grunwaldzka/Kanałowa"
-            },
-            {
-                "kod": "B06003",
-                "nazwa": "Rondo Grunwaldzkie"
-            },
-            {
-                "kod": "B02057",
-                "nazwa": "Garbary"
-            },
-            {
-                "kod": "B02048",
-                "nazwa": "Plac Piastowski"
-            },
-            {
-                "kod": "B02080",
-                "nazwa": "Śniadeckich/Sienkiewicza"
-            },
-            {
-                "kod": "B03019",
-                "nazwa": "Gdańska/Cieszkowskiego"
-            },
-            {
-                "kod": "B03002",
-                "nazwa": "Mickiewicza/Teatr Polski"
-            },
-            {
-                "kod": "B03004",
-                "nazwa": "Rondo Wielkopolskie"
-            },
-            {
-                "kod": "B03006",
-                "nazwa": "Powstańców Wielkopolskich/Lelewela"
-            },
-            {
-                "kod": "B04065",
-                "nazwa": "Wyszyńskiego/Powstańców Wielkopolskich"
-            },
-            {
-                "kod": "B04015",
-                "nazwa": "Skłodowskiej Curie/Gajowa"
-            },
-            {
-                "kod": "B04019",
-                "nazwa": "Bałtycka/Skłodowskiej Curie"
-            },
-            {
-                "kod": "B04008",
-                "nazwa": "Bałtycka/Głowackiego"
-            },
-            {
-                "kod": "B04012",
-                "nazwa": "Morska"
-            }
-        ],
-        "Rekinowa (z: Morska)": [
-            {
-                "kod": "B04012",
-                "nazwa": "Morska"
-            },
-            {
-                "kod": "B04009",
-                "nazwa": "Bałtycka/Głowackiego"
-            },
-            {
-                "kod": "B04017",
-                "nazwa": "Skłodowskiej Curie/Bałtycka"
-            },
-            {
-                "kod": "B04016",
-                "nazwa": "Skłodowskiej Curie/Gajowa"
-            },
-            {
-                "kod": "B04014",
-                "nazwa": "Rondo Skrzetuskie"
-            },
-            {
-                "kod": "B04002",
                 "nazwa": "Powstańców Wielkopolskich/Wyszyńskiego"
             },
             {
@@ -9028,7 +9520,7 @@
         ]
     },
     "76": {
-        "Toruńska": [
+        "Kazimierza Wielkiego": [
             {
                 "kod": "B03030",
                 "nazwa": "Rondo Jagiellonów"
@@ -9062,8 +9554,8 @@
                 "nazwa": "Toruńska/Łuczniczki"
             },
             {
-                "kod": "B99092",
-                "nazwa": "Toruńska/Kazimierza Wielkiego"
+                "kod": "B12006",
+                "nazwa": "Kazimierza Wielkiego/Toruńska"
             }
         ],
         "Rondo Jagiellonów": [
@@ -9076,8 +9568,8 @@
                 "nazwa": "Nowotoruńska/Kielecka"
             },
             {
-                "kod": "B99092",
-                "nazwa": "Toruńska/Kazimierza Wielkiego"
+                "kod": "B12006",
+                "nazwa": "Kazimierza Wielkiego/Toruńska"
             },
             {
                 "kod": "B11048",
@@ -9176,12 +9668,12 @@
                 "nazwa": "Garbary"
             },
             {
-                "kod": "B02049",
-                "nazwa": "Fredry/Warszawska"
+                "kod": "B02048",
+                "nazwa": "Plac Piastowski"
             },
             {
-                "kod": "B02051",
-                "nazwa": "Mazowiecka/Pomorska"
+                "kod": "B02080",
+                "nazwa": "Śniadeckich/Sienkiewicza"
             },
             {
                 "kod": "B03019",
@@ -9217,116 +9709,6 @@
             }
         ],
         "Niklowa": [
-            {
-                "kod": "B04012",
-                "nazwa": "Morska"
-            },
-            {
-                "kod": "B04006",
-                "nazwa": "Głowackiego/Bałtycka"
-            },
-            {
-                "kod": "B04004",
-                "nazwa": "Głowackiego/Gajowa"
-            },
-            {
-                "kod": "B04001",
-                "nazwa": "Powstańców Wielkopolskich/Wyszyńskiego"
-            },
-            {
-                "kod": "B03007",
-                "nazwa": "Powstańców Wielkopolskich/Lelewela"
-            },
-            {
-                "kod": "B03003",
-                "nazwa": "Rondo Wielkopolskie"
-            },
-            {
-                "kod": "B03001",
-                "nazwa": "Mickiewicza/Teatr Polski"
-            },
-            {
-                "kod": "B02050",
-                "nazwa": "Hetmańska/Kaszubska"
-            },
-            {
-                "kod": "B02034",
-                "nazwa": "Dworzec Główny"
-            },
-            {
-                "kod": "B02081",
-                "nazwa": "Królowej Jadwigi/Astoria"
-            },
-            {
-                "kod": "B02058",
-                "nazwa": "Garbary"
-            },
-            {
-                "kod": "B06004",
-                "nazwa": "Rondo Grunwaldzkie"
-            },
-            {
-                "kod": "B05038",
-                "nazwa": "Grunwaldzka/Kanałowa"
-            },
-            {
-                "kod": "B05096",
-                "nazwa": "Grunwaldzka/Czarna Droga"
-            },
-            {
-                "kod": "B05040",
-                "nazwa": "Grunwaldzka/Kraszewskiego"
-            },
-            {
-                "kod": "B05093",
-                "nazwa": "Rondo Maczka"
-            },
-            {
-                "kod": "B05097",
-                "nazwa": "Bronikowskiego/Śluzowa"
-            },
-            {
-                "kod": "B05066",
-                "nazwa": "Dworzec Zachód"
-            },
-            {
-                "kod": "B05068",
-                "nazwa": "Mińska/Studzienna"
-            },
-            {
-                "kod": "B05070",
-                "nazwa": "Mińska/Plonowa"
-            },
-            {
-                "kod": "B05072",
-                "nazwa": "Kruszyńska/Krańcowa"
-            },
-            {
-                "kod": "B05074",
-                "nazwa": "Kruszyńska/Sowia"
-            },
-            {
-                "kod": "B99189",
-                "nazwa": "Podmiejska/Kruszyńska"
-            },
-            {
-                "kod": "B05059",
-                "nazwa": "Srebrna/Stalowa"
-            },
-            {
-                "kod": "B05061",
-                "nazwa": "Srebrna/Spiżowa"
-            },
-            {
-                "kod": "B05063",
-                "nazwa": "Spiżowa/Ołowiana"
-            },
-            {
-                "kod": "B05064",
-                "nazwa": "Niklowa"
-            }
-        ],
-        "Niklowa (z: Morska)": [
             {
                 "kod": "B04012",
                 "nazwa": "Morska"
@@ -9435,112 +9817,6 @@
                 "kod": "B05064",
                 "nazwa": "Niklowa"
             }
-        ],
-        "Morska (z: Niklowa)": [
-            {
-                "kod": "B05064",
-                "nazwa": "Niklowa"
-            },
-            {
-                "kod": "B05062",
-                "nazwa": "Srebrna/Spiżowa"
-            },
-            {
-                "kod": "B05060",
-                "nazwa": "Srebrna/Stalowa"
-            },
-            {
-                "kod": "B99190",
-                "nazwa": "Podmiejska/Kruszyńska"
-            },
-            {
-                "kod": "B05075",
-                "nazwa": "Kruszyńska/Sowia"
-            },
-            {
-                "kod": "B05073",
-                "nazwa": "Kruszyńska/Krańcowa"
-            },
-            {
-                "kod": "B05071",
-                "nazwa": "Mińska/Plonowa"
-            },
-            {
-                "kod": "B05069",
-                "nazwa": "Mińska/Studzienna"
-            },
-            {
-                "kod": "B05067",
-                "nazwa": "Dworzec Zachód"
-            },
-            {
-                "kod": "B05098",
-                "nazwa": "Bronikowskiego/Śluzowa"
-            },
-            {
-                "kod": "B05093",
-                "nazwa": "Rondo Maczka"
-            },
-            {
-                "kod": "B05041",
-                "nazwa": "Grunwaldzka/Kraszewskiego"
-            },
-            {
-                "kod": "B05095",
-                "nazwa": "Grunwaldzka/Czarna Droga"
-            },
-            {
-                "kod": "B05039",
-                "nazwa": "Grunwaldzka/Kanałowa"
-            },
-            {
-                "kod": "B06003",
-                "nazwa": "Rondo Grunwaldzkie"
-            },
-            {
-                "kod": "B02057",
-                "nazwa": "Garbary"
-            },
-            {
-                "kod": "B02049",
-                "nazwa": "Fredry/Warszawska"
-            },
-            {
-                "kod": "B02051",
-                "nazwa": "Mazowiecka/Pomorska"
-            },
-            {
-                "kod": "B03019",
-                "nazwa": "Gdańska/Cieszkowskiego"
-            },
-            {
-                "kod": "B03002",
-                "nazwa": "Mickiewicza/Teatr Polski"
-            },
-            {
-                "kod": "B03004",
-                "nazwa": "Rondo Wielkopolskie"
-            },
-            {
-                "kod": "B03006",
-                "nazwa": "Powstańców Wielkopolskich/Lelewela"
-            },
-            {
-                "kod": "B04003",
-                "nazwa": "Powstańców Wielkopolskich/Wyszyńskiego"
-            },
-            {
-                "kod": "B04005",
-                "nazwa": "Głowackiego/Gajowa"
-            },
-            {
-                "kod": "B04007",
-                "nazwa": "Głowackiego/Bałtycka"
-            },
-            {
-                "kod": "B04012",
-                "nazwa": "Morska"
-            }
         ]
     },
     "79": {
@@ -9638,202 +9914,6 @@
             {
                 "kod": "B10053",
                 "nazwa": "Glinki/Cmentarna"
-            },
-            {
-                "kod": "B10095",
-                "nazwa": "Trasa Uniwersytecka/Ujejskiego"
-            },
-            {
-                "kod": "B10031",
-                "nazwa": "Wzgórze Wolności"
-            },
-            {
-                "kod": "B10015",
-                "nazwa": "Rondo Kujawskie"
-            },
-            {
-                "kod": "B09038",
-                "nazwa": "Solskiego/Ugory"
-            },
-            {
-                "kod": "B09036",
-                "nazwa": "Solskiego/Bielicka"
-            },
-            {
-                "kod": "B09034",
-                "nazwa": "Solskiego/Kossaka"
-            },
-            {
-                "kod": "B09006",
-                "nazwa": "Szubińska/Piękna"
-            },
-            {
-                "kod": "B09003",
-                "nazwa": "Plac Poznański"
-            },
-            {
-                "kod": "B06003",
-                "nazwa": "Rondo Grunwaldzkie"
-            },
-            {
-                "kod": "B02057",
-                "nazwa": "Garbary"
-            },
-            {
-                "kod": "B02047",
-                "nazwa": "Warszawska/Fredry"
-            },
-            {
-                "kod": "B02039",
-                "nazwa": "Dworzec Główny"
-            },
-            {
-                "kod": "B02044",
-                "nazwa": "Rycerska"
-            }
-        ],
-        "Glinki(W)": [
-            {
-                "kod": "B02044",
-                "nazwa": "Rycerska"
-            },
-            {
-                "kod": "B02034",
-                "nazwa": "Dworzec Główny"
-            },
-            {
-                "kod": "B02081",
-                "nazwa": "Królowej Jadwigi/Astoria"
-            },
-            {
-                "kod": "B02058",
-                "nazwa": "Garbary"
-            },
-            {
-                "kod": "B06002",
-                "nazwa": "Rondo Grunwaldzkie"
-            },
-            {
-                "kod": "B09004",
-                "nazwa": "Plac Poznański"
-            },
-            {
-                "kod": "B09007",
-                "nazwa": "Piękna/Szubińska"
-            },
-            {
-                "kod": "B09035",
-                "nazwa": "Solskiego/Kossaka"
-            },
-            {
-                "kod": "B09037",
-                "nazwa": "Solskiego/Bielicka"
-            },
-            {
-                "kod": "B09039",
-                "nazwa": "Solskiego/Ugory"
-            },
-            {
-                "kod": "B10026",
-                "nazwa": "Rondo Kujawskie"
-            },
-            {
-                "kod": "B10093",
-                "nazwa": "Wzgórze Wolności"
-            },
-            {
-                "kod": "B10094",
-                "nazwa": "Trasa Uniwersytecka/Ujejskiego"
-            },
-            {
-                "kod": "B10068",
-                "nazwa": "Cmentarna/Glinki"
-            },
-            {
-                "kod": "B10070",
-                "nazwa": "Cmentarna/Gniewkowska"
-            },
-            {
-                "kod": "B10072",
-                "nazwa": "Cmentarna/Dobrzyńska"
-            },
-            {
-                "kod": "B10074",
-                "nazwa": "Wąbrzeska"
-            },
-            {
-                "kod": "B10073",
-                "nazwa": "Cmentarna/Dobrzyńska"
-            },
-            {
-                "kod": "B10071",
-                "nazwa": "Cmentarna/Gniewkowska"
-            },
-            {
-                "kod": "B10069",
-                "nazwa": "Cmentarna/Glinki"
-            },
-            {
-                "kod": "B10087",
-                "nazwa": "Magnuszewska"
-            },
-            {
-                "kod": "B10060",
-                "nazwa": "Glinki/Stadion BKS Chemik"
-            },
-            {
-                "kod": "B10062",
-                "nazwa": "Glinki/Zajęcza"
-            },
-            {
-                "kod": "B11079",
-                "nazwa": "Glinki"
-            }
-        ],
-        "Rycerska(W)": [
-            {
-                "kod": "B10059",
-                "nazwa": "Glinki/Stadion BKS Chemik"
-            },
-            {
-                "kod": "B10057",
-                "nazwa": "Magnuszewska"
-            },
-            {
-                "kod": "B10055",
-                "nazwa": "Glinki/Zelwerowicza"
-            },
-            {
-                "kod": "B10053",
-                "nazwa": "Glinki/Cmentarna"
-            },
-            {
-                "kod": "B10068",
-                "nazwa": "Cmentarna/Glinki"
-            },
-            {
-                "kod": "B10070",
-                "nazwa": "Cmentarna/Gniewkowska"
-            },
-            {
-                "kod": "B10072",
-                "nazwa": "Cmentarna/Dobrzyńska"
-            },
-            {
-                "kod": "B10074",
-                "nazwa": "Wąbrzeska"
-            },
-            {
-                "kod": "B10073",
-                "nazwa": "Cmentarna/Dobrzyńska"
-            },
-            {
-                "kod": "B10071",
-                "nazwa": "Cmentarna/Gniewkowska"
-            },
-            {
-                "kod": "B10069",
-                "nazwa": "Cmentarna/Glinki"
             },
             {
                 "kod": "B10095",
@@ -10244,8 +10324,24 @@
                 "nazwa": "Wyzwolenia/Styki"
             },
             {
-                "kod": "B07038",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B08001",
+                "nazwa": "Wyzwolenia/Swobodna"
+            },
+            {
+                "kod": "B08006",
+                "nazwa": "Niepodległości"
+            },
+            {
+                "kod": "B08108",
+                "nazwa": "Andersa/Wolna"
+            },
+            {
+                "kod": "B08105",
+                "nazwa": "Kasztelańska/Andersa"
+            },
+            {
+                "kod": "B07066",
+                "nazwa": "Rondo Buxakowskiego"
             },
             {
                 "kod": "B07036",
@@ -10390,8 +10486,24 @@
                 "nazwa": "Fordońska/Wiadukt"
             },
             {
-                "kod": "B07037",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B07065",
+                "nazwa": "Rondo Buxakowskiego"
+            },
+            {
+                "kod": "B08052",
+                "nazwa": "Andersa/Kasztelańska"
+            },
+            {
+                "kod": "B08109",
+                "nazwa": "Andersa/Wolna"
+            },
+            {
+                "kod": "B08069",
+                "nazwa": "Niepodległości"
+            },
+            {
+                "kod": "B08002",
+                "nazwa": "Wyzwolenia/Swobodna"
             },
             {
                 "kod": "B07039",
@@ -10458,20 +10570,20 @@
                 "nazwa": "Wyzwolenia/Derdowskiego"
             },
             {
-                "kod": "B08069",
+                "kod": "B08006",
                 "nazwa": "Niepodległości"
             },
             {
-                "kod": "B08002",
-                "nazwa": "Wyzwolenia/Swobodna"
+                "kod": "B08108",
+                "nazwa": "Andersa/Wolna"
             },
             {
-                "kod": "B07040",
-                "nazwa": "Wyzwolenia/Styki"
+                "kod": "B08105",
+                "nazwa": "Kasztelańska/Andersa"
             },
             {
-                "kod": "B07038",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B07066",
+                "nazwa": "Rondo Buxakowskiego"
             },
             {
                 "kod": "B07036",
@@ -10636,16 +10748,16 @@
                 "nazwa": "Fordońska/Wiadukt"
             },
             {
-                "kod": "B07037",
-                "nazwa": "Fordon/Rynek"
+                "kod": "B07065",
+                "nazwa": "Rondo Buxakowskiego"
             },
             {
-                "kod": "B07039",
-                "nazwa": "Wyzwolenia/Styki"
+                "kod": "B08052",
+                "nazwa": "Andersa/Kasztelańska"
             },
             {
-                "kod": "B08001",
-                "nazwa": "Wyzwolenia/Swobodna"
+                "kod": "B08109",
+                "nazwa": "Andersa/Wolna"
             },
             {
                 "kod": "B08005",
@@ -11895,6 +12007,210 @@
                 "kod": "B02058",
                 "nazwa": "Garbary"
             }
+        ],
+        "Łochowice (z: Garbary)": [
+            {
+                "kod": "B02058",
+                "nazwa": "Garbary"
+            },
+            {
+                "kod": "B06001",
+                "nazwa": "Rondo Grunwaldzkie"
+            },
+            {
+                "kod": "B06009",
+                "nazwa": "Nakielska/Stawowa"
+            },
+            {
+                "kod": "B06013",
+                "nazwa": "Nakielska/Wrzesińska"
+            },
+            {
+                "kod": "B06042",
+                "nazwa": "Nakielska/Słoneczna"
+            },
+            {
+                "kod": "B06040",
+                "nazwa": "Wilczak"
+            },
+            {
+                "kod": "B06019",
+                "nazwa": "Nakielska/Widok"
+            },
+            {
+                "kod": "B06021",
+                "nazwa": "Nakielska/Pijarów"
+            },
+            {
+                "kod": "B06023",
+                "nazwa": "Nakielska/Wiśniowa"
+            },
+            {
+                "kod": "B06025",
+                "nazwa": "Nakielska/Żywiecka"
+            },
+            {
+                "kod": "B06028",
+                "nazwa": "Nakielska/Tarnowska"
+            },
+            {
+                "kod": "B06030",
+                "nazwa": "Nakielska/Notecka"
+            },
+            {
+                "kod": "B06032",
+                "nazwa": "Nakielska/Lisia"
+            },
+            {
+                "kod": "B06034",
+                "nazwa": "Łochowska"
+            },
+            {
+                "kod": "B06036",
+                "nazwa": "Belma"
+            },
+            {
+                "kod": "B06035",
+                "nazwa": "Łochowska"
+            },
+            {
+                "kod": "B13026",
+                "nazwa": "Lisi Ogon/Bydgoska/Spokojna 1"
+            },
+            {
+                "kod": "B13201",
+                "nazwa": "Lisi Ogon/Potulicka/Szlachecka"
+            },
+            {
+                "kod": "B13203",
+                "nazwa": "Lisi Ogon/Potulicka 32/Hubertusa"
+            },
+            {
+                "kod": "B13205",
+                "nazwa": "Łochowo/Szosa Bydgoska/Kasztanowa"
+            },
+            {
+                "kod": "B13207",
+                "nazwa": "Łochowo/Szosa Bydgoska/Grabowa"
+            },
+            {
+                "kod": "B13209",
+                "nazwa": "Łochowo/Szosa Nakielska/Czereśniowa"
+            },
+            {
+                "kod": "B13211",
+                "nazwa": "Łochowo/Nakielska 34/Cmentarz"
+            },
+            {
+                "kod": "B13213",
+                "nazwa": "Łochowice/Nakielska/Kanałowa"
+            },
+            {
+                "kod": "B13215",
+                "nazwa": "Łochowice/Nakielska/Zajęcza/Pętla"
+            }
+        ],
+        "Garbary (z: Łochowice)": [
+            {
+                "kod": "B13214",
+                "nazwa": "Łochowice/Nakielska/Kurkowa Sklep"
+            },
+            {
+                "kod": "B13212",
+                "nazwa": "Łochowo/Nakielska 33"
+            },
+            {
+                "kod": "B13210",
+                "nazwa": "Łochowo/Szosa Nakielska/Topolowa"
+            },
+            {
+                "kod": "B13208",
+                "nazwa": "Łochowo/Wierzbowa"
+            },
+            {
+                "kod": "B13206",
+                "nazwa": "Łochowo/Szosa Bydgoska/Kwiatowa"
+            },
+            {
+                "kod": "B13204",
+                "nazwa": "Lisi Ogon/Potulicka/Wyczynowa"
+            },
+            {
+                "kod": "B13202",
+                "nazwa": "Lisi Ogon/Potulicka/Dworska"
+            },
+            {
+                "kod": "B13200",
+                "nazwa": "Lisi Ogon/Bydgoska 10-12"
+            },
+            {
+                "kod": "B06034",
+                "nazwa": "Łochowska"
+            },
+            {
+                "kod": "B06036",
+                "nazwa": "Belma"
+            },
+            {
+                "kod": "B06035",
+                "nazwa": "Łochowska"
+            },
+            {
+                "kod": "B06033",
+                "nazwa": "Nakielska/Lisia"
+            },
+            {
+                "kod": "B06031",
+                "nazwa": "Nakielska/Notecka"
+            },
+            {
+                "kod": "B06029",
+                "nazwa": "Nakielska/Tarnowska"
+            },
+            {
+                "kod": "B06027",
+                "nazwa": "Nakielska/Iglasta"
+            },
+            {
+                "kod": "B06026",
+                "nazwa": "Nakielska/Żywiecka"
+            },
+            {
+                "kod": "B06024",
+                "nazwa": "Nakielska/Wiśniowa"
+            },
+            {
+                "kod": "B06022",
+                "nazwa": "Nakielska/Pijarów"
+            },
+            {
+                "kod": "B06020",
+                "nazwa": "Nakielska/Widok"
+            },
+            {
+                "kod": "B06041",
+                "nazwa": "Wilczak"
+            },
+            {
+                "kod": "B06043",
+                "nazwa": "Nakielska/Słoneczna"
+            },
+            {
+                "kod": "B06014",
+                "nazwa": "Nakielska/Wrzesińska"
+            },
+            {
+                "kod": "B06010",
+                "nazwa": "Nakielska/Stawowa"
+            },
+            {
+                "kod": "B06003",
+                "nazwa": "Rondo Grunwaldzkie"
+            },
+            {
+                "kod": "B02058",
+                "nazwa": "Garbary"
+            }
         ]
     },
     "91": {
@@ -12052,6 +12368,182 @@
             {
                 "kod": "B13028",
                 "nazwa": "Białe Błota/Chlebowa"
+            },
+            {
+                "kod": "B09019",
+                "nazwa": "Błonie"
+            }
+        ],
+        "Brzoza (z: Błonie)": [
+            {
+                "kod": "B09019",
+                "nazwa": "Błonie"
+            },
+            {
+                "kod": "B13342",
+                "nazwa": "Białe Błota/Cukiernicza"
+            },
+            {
+                "kod": "B13027",
+                "nazwa": "Białe Błota/Chlebowa"
+            },
+            {
+                "kod": "B13029",
+                "nazwa": "Białe Błota/Czerska"
+            },
+            {
+                "kod": "B13031",
+                "nazwa": "Białe Błota/Modra"
+            },
+            {
+                "kod": "B13033",
+                "nazwa": "Białe Błota/Kruszyńska"
+            },
+            {
+                "kod": "B13035",
+                "nazwa": "Ciele/Pogodna"
+            },
+            {
+                "kod": "B13037",
+                "nazwa": "Ciele/Makowa"
+            },
+            {
+                "kod": "B13039",
+                "nazwa": "Ciele/Ogrody"
+            },
+            {
+                "kod": "B13192",
+                "nazwa": "Ciele/Myśliwska"
+            },
+            {
+                "kod": "B13040",
+                "nazwa": "Ciele/Kościelna"
+            },
+            {
+                "kod": "B13101",
+                "nazwa": "Ciele/Źródlana"
+            },
+            {
+                "kod": "B13301",
+                "nazwa": "Zielonka/Bocianowo"
+            },
+            {
+                "kod": "B13043",
+                "nazwa": "Zielonka/Orzechowa"
+            },
+            {
+                "kod": "B13045",
+                "nazwa": "Przyłęki/Biznesowa"
+            },
+            {
+                "kod": "B13241",
+                "nazwa": "Przyłęki/Biznesowa"
+            },
+            {
+                "kod": "B13047",
+                "nazwa": "Przyłęki/Młyńska"
+            },
+            {
+                "kod": "B13048",
+                "nazwa": "Przyłęki/Kościół"
+            },
+            {
+                "kod": "B13050",
+                "nazwa": "Przyłęki/Cicha"
+            },
+            {
+                "kod": "B13052",
+                "nazwa": "Przyłęki/Wodna"
+            },
+            {
+                "kod": "B13310",
+                "nazwa": "Brzoza II"
+            },
+            {
+                "kod": "B13309",
+                "nazwa": "Brzoza/Okrężna"
+            }
+        ],
+        "Błonie (z: Brzoza II)": [
+            {
+                "kod": "B13310",
+                "nazwa": "Brzoza II"
+            },
+            {
+                "kod": "B13053",
+                "nazwa": "Przyłęki/Wodna"
+            },
+            {
+                "kod": "B13051",
+                "nazwa": "Przyłęki/Cicha"
+            },
+            {
+                "kod": "B13049",
+                "nazwa": "Przyłęki/Kościół"
+            },
+            {
+                "kod": "B13047",
+                "nazwa": "Przyłęki/Młyńska"
+            },
+            {
+                "kod": "B13346",
+                "nazwa": "Przyłęki/Biznesowa"
+            },
+            {
+                "kod": "B13046",
+                "nazwa": "Przyłęki/Biznesowa"
+            },
+            {
+                "kod": "B13044",
+                "nazwa": "Zielonka/Orzechowa"
+            },
+            {
+                "kod": "B13301",
+                "nazwa": "Zielonka/Bocianowo"
+            },
+            {
+                "kod": "B13102",
+                "nazwa": "Ciele/Źródlana"
+            },
+            {
+                "kod": "B13193",
+                "nazwa": "Ciele/Myśliwska"
+            },
+            {
+                "kod": "B13293",
+                "nazwa": "Ciele/Gęsia"
+            },
+            {
+                "kod": "B13124",
+                "nazwa": "Ciele/Ogrody (Świetlica)"
+            },
+            {
+                "kod": "B13038",
+                "nazwa": "Ciele/Makowa"
+            },
+            {
+                "kod": "B13036",
+                "nazwa": "Ciele/Pogodna"
+            },
+            {
+                "kod": "B13034",
+                "nazwa": "Białe Błota/Kruszyńska"
+            },
+            {
+                "kod": "B13032",
+                "nazwa": "Białe Błota/Modra"
+            },
+            {
+                "kod": "B13030",
+                "nazwa": "Białe Błota/Czekoladowa"
+            },
+            {
+                "kod": "B13341",
+                "nazwa": "Białe Błota/Chlebowa"
+            },
+            {
+                "kod": "B13343",
+                "nazwa": "Białe Błota/Daleka"
             },
             {
                 "kod": "B09019",
@@ -13131,6 +13623,72 @@
                 "kod": "B09019",
                 "nazwa": "Błonie"
             }
+        ],
+        "Błonie (z: Przyłęki)": [
+            {
+                "kod": "B13346",
+                "nazwa": "Przyłęki/Biznesowa"
+            },
+            {
+                "kod": "B13242",
+                "nazwa": "Zielonka/Koperkowa"
+            },
+            {
+                "kod": "B13240",
+                "nazwa": "Zielonka/Orzechowa"
+            },
+            {
+                "kod": "B13238",
+                "nazwa": "Zielonka/Jodłowa"
+            },
+            {
+                "kod": "B13236",
+                "nazwa": "Zielonka/Stokrotki Polnej"
+            },
+            {
+                "kod": "B13234",
+                "nazwa": "Zielonka/Biedronki"
+            },
+            {
+                "kod": "B13232",
+                "nazwa": "Zielonka/Kielecka"
+            },
+            {
+                "kod": "B13301",
+                "nazwa": "Zielonka/Bocianowo"
+            },
+            {
+                "kod": "B13303",
+                "nazwa": "Zielonka/Żołędziowa"
+            },
+            {
+                "kod": "B13304",
+                "nazwa": "Prądki"
+            },
+            {
+                "kod": "B13302",
+                "nazwa": "Zielonka/Żołędziowa"
+            },
+            {
+                "kod": "B13042",
+                "nazwa": "Zielonka/Bocianowo"
+            },
+            {
+                "kod": "B13102",
+                "nazwa": "Ciele/Źródlana"
+            },
+            {
+                "kod": "B13133",
+                "nazwa": "al. Żołnierzy Wyklętych/Ciele"
+            },
+            {
+                "kod": "B13134",
+                "nazwa": "Trzciniec/Sarnia"
+            },
+            {
+                "kod": "B09019",
+                "nazwa": "Błonie"
+            }
         ]
     },
     "97": {
@@ -13635,7 +14193,7 @@
             },
             {
                 "kod": "B99048",
-                "nazwa": "Gdańska/Cieszkowskiego"
+                "nazwa": "Gdańska/Cieszkowekiego"
             },
             {
                 "kod": "B03022",
@@ -13666,20 +14224,24 @@
                 "nazwa": "Toruńska/Łuczniczki"
             },
             {
-                "kod": "B12006",
-                "nazwa": "Kazimierza Wielkiego/Toruńska"
+                "kod": "B12005",
+                "nazwa": "Toruńska/Kazimierza Wielkiego"
             },
             {
-                "kod": "B12036",
-                "nazwa": "Nowotoruńska/Prezydenta Lecha Kaczyńskiego"
+                "kod": "B12009",
+                "nazwa": "Toruńska/Zajezdnia Tramwajowa"
             },
             {
-                "kod": "B12096",
-                "nazwa": "Kielecka/Smoleńska"
+                "kod": "B99015",
+                "nazwa": "Toruńska/Tor Awaryjny"
             },
             {
-                "kod": "B12097",
-                "nazwa": "Kielecka/Toruńska"
+                "kod": "B12015",
+                "nazwa": "Toruńska/Równa"
+            },
+            {
+                "kod": "B12019",
+                "nazwa": "Toruńska/Kielecka"
             },
             {
                 "kod": "B99017",
@@ -13724,20 +14286,24 @@
                 "nazwa": "Toruńska/Sporna"
             },
             {
-                "kod": "B12097",
-                "nazwa": "Kielecka/Toruńska"
+                "kod": "B12020",
+                "nazwa": "Toruńska/Kielecka"
             },
             {
-                "kod": "B12095",
-                "nazwa": "Kielecka/Smoleńska"
+                "kod": "B12016",
+                "nazwa": "Toruńska/Równa"
             },
             {
-                "kod": "B12088",
-                "nazwa": "Nowotoruńska/Kielecka"
+                "kod": "B99016",
+                "nazwa": "Toruńska/Tor Awaryjny"
             },
             {
-                "kod": "B99092",
-                "nazwa": "Toruńska/Kazimierza Wielkiego"
+                "kod": "B12010",
+                "nazwa": "Toruńska/Zajezdnia Tramwajowa"
+            },
+            {
+                "kod": "B12006",
+                "nazwa": "Kazimierza Wielkiego/Toruńska"
             },
             {
                 "kod": "B11048",

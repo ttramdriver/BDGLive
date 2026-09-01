@@ -94,11 +94,17 @@
         .modal-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.6); z-index: 2000; display: none;
-            justify-content: center; align-items: center; padding: 20px; box-sizing: border-box;
+            /* Suwak przeniesiony na całe tło: */
+            overflow-y: auto; 
+            -webkit-overflow-scrolling: touch; 
+            padding: 20px; box-sizing: border-box;
         }
+
         .modal-content {
-            background: var(--surface-color); border-radius: 12px; width: 100%; max-width: 600px;
-            max-height: 85vh; overflow-y: auto; padding: 30px; position: relative; box-sizing: border-box;
+            background: var(--surface-color); border-radius: 12px; 
+            width: 100%; max-width: 600px;
+            margin: 40px auto; 
+            padding: 30px; position: relative; box-sizing: border-box;
         }
         .modal-buttons { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
         .modal-buttons button { padding: 12px 20px; border-radius: 8px; background: transparent; border: 2px solid var(--primary-color); color: var(--text-main); font-weight: bold; cursor: pointer; font-size: 1em; transition: 0.2s; }
@@ -337,7 +343,11 @@
         <header class="header-container">
             <span class="header-subtitle">Komunikacja miejska i podmiejska na żywo</span>
             <article class="infobox-technical-issues"> 
+<<<<<<< Updated upstream
                 <span class="infobox-technical-issues-title"> 
+=======
+                                 <span class="infobox-technical-issues-title"> 
+>>>>>>> Stashed changes
                     <span style="margin-left: -1px">
                         <svg viewBox="0 0 25 25" style="fill:#ffffff; margin-top: -3px; height: 25px; width: 25px;" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="nonzero"
@@ -448,8 +458,7 @@
                     </thead>
                     <tbody>
                         {% for dep in departures %}
-                        <!-- Dodano obsługę kliknięcia wiersza kursu, aby otworzyć modal z pozostałymi przystankami -->
-                        <tr style="cursor: pointer;" data-line="{{ dep.line }}" data-direction="{{ dep.direction }}" onclick="showJourneyDetails(this.getAttribute('data-line'), this.getAttribute('data-direction'))">
+                        <tr style="cursor: pointer;" data-line="{{ dep.line }}" data-direction="{{ dep.direction }}" onclick="showJourneyDetails(this.getAttribute('data-line'), this.getAttribute('data-direction'), '{{ dep.time }}')">
                             <td data-label="{% if stop_number and stop_number.startswith('P') %}Numer pociągu{% else %}Linia{% endif %}">
                                 <span class="line-number">{{ dep.line }}</span>
                             </td>
@@ -485,7 +494,7 @@
 
         /* --- LOGIKA DLA MODALI --- */
         function openTimetablesModal() {
-            document.getElementById('timetables-modal').style.display = 'flex';
+            document.getElementById('timetables-modal').style.display = 'block'; // Zmiana na block
             document.getElementById('modal-city-select').style.display = 'flex';
             document.getElementById('modal-browser-content').style.display = 'none';
         }
@@ -495,7 +504,7 @@
         }
 
         function openPlannerModal() {
-            document.getElementById('planner-modal').style.display = 'flex';
+            document.getElementById('planner-modal').style.display = 'block';
             
             const now = new Date();
             const year = now.getFullYear();
@@ -817,6 +826,9 @@
 
         let trasyBydgoszcz = parseTrasy({{ trasy_b | default({}) | tojson | safe }});
         let trasyTorun = parseTrasy({{ trasy_t | default({}) | tojson | safe }});
+
+        let czasyBydgoszcz = parseTrasy({{ czasy_b | default({}) | tojson | safe }});
+        let czasyTorun = parseTrasy({{ czasy_t | default({}) | tojson | safe }});
         
         let obecnyWidok = 'linie';
         let wybranaLinia = '';
@@ -968,9 +980,7 @@
             });
         }
 
-        /* --- NOWA FUNKCJA: PODGLĄD TRASY Z TABELI ODJAZDÓW --- */
-        function showJourneyDetails(line, direction) {
-            // Identyfikujemy aktualny przystanek z pola wyszukiwania
+        function showJourneyDetails(line, direction, departureTimeStr) {
             const currentStopRaw = "{{ stop_number if stop_number else '' }}".trim();
             if(!currentStopRaw) return;
 
@@ -985,10 +995,10 @@
 
             let city = currentStopIdRaw.startsWith('T') ? 'T' : 'B';
             let trasy = city === 'T' ? trasyTorun : trasyBydgoszcz;
+            let czasyOdcinkow = city === 'T' ? czasyTorun : czasyBydgoszcz; // Wybór odpowiedniej bazy czasów
             
             let route = trasy[line];
             if (!route) {
-                // Spróbuj dopasować mimo różnicy w wielkości liter (np. ZAT6 vs ZaT6)
                 let l_upper = line.toUpperCase();
                 let key = Object.keys(trasy).find(k => k.toUpperCase() === l_upper);
                 if(key) route = trasy[key];
@@ -998,18 +1008,14 @@
                 }
             }
 
-            // Znajdź najbardziej zbliżony kierunek w JSON do tego z API na żywo
             let bestDir = Object.keys(route).find(k => k.toLowerCase() === direction.toLowerCase());
             if (!bestDir) {
                 bestDir = Object.keys(route).find(k => k.toLowerCase().includes(direction.toLowerCase()) || direction.toLowerCase().includes(k.toLowerCase()));
             }
-            if (!bestDir) {
-                bestDir = Object.keys(route)[0]; // Fallback
-            }
+            if (!bestDir) bestDir = Object.keys(route)[0];
             
             let allStops = route[bestDir];
             
-            // Szukamy indeksu obecnego przystanku na trasie (odcinamy zera wiodące lub prefiksy jeśli trzeba)
             let startIndex = allStops.findIndex(s => {
                 let sc = String(s.kod);
                 if(sc === currentStopIdRaw) return true;
@@ -1018,34 +1024,53 @@
                 return false;
             });
             
-            // Fallback po nazwie, jeśli kod by się nie zgadzał
             if (startIndex === -1 && currentStopNameRaw) {
                 startIndex = allStops.findIndex(s => s.nazwa.toLowerCase() === currentStopNameRaw.toLowerCase());
             }
-            
             if (startIndex === -1) startIndex = 0;
             
-            // Bierzemy tylko pozostałe przystanki od naszego włącznie
             let remainingStops = allStops.slice(startIndex);
             
+            // Obliczanie czasu bazowego
+            let baseTime = new Date();
+            const timeMatch = departureTimeStr.match(/(\d{2}):(\d{2})/);
+            if (timeMatch) {
+                baseTime.setHours(parseInt(timeMatch[1]), parseInt(timeMatch[2]), 0, 0);
+            } else {
+                const minMatch = departureTimeStr.match(/(\d+)\s*min/);
+                if (minMatch) baseTime.setMinutes(baseTime.getMinutes() + parseInt(minMatch[1]));
+            }
+
             document.getElementById('journey-title').innerText = 'Linia ' + line;
             document.getElementById('journey-subtitle').innerText = 'Kierunek: ' + bestDir;
             
             const timeline = document.getElementById('journey-timeline');
             timeline.innerHTML = '';
             
+            let accumulatedMinutes = 0;
+
             remainingStops.forEach((przystanek, index) => {
                 const div = document.createElement('div');
                 div.className = 'route-stop';
+                div.style.display = 'flex';
+                div.style.justifyContent = 'space-between';
+                div.style.alignItems = 'center';
                 
-                // Wyróżnij aktualny przystanek
+                let stopTime = new Date(baseTime.getTime() + accumulatedMinutes * 60000);
+                let timeString = stopTime.toLocaleTimeString('pl-PL', {hour: '2-digit', minute:'2-digit'});
+                
+                let stopNameHtml = '';
+                let timeHtml = '';
+
                 if (index === 0) {
-                    div.innerHTML = `<strong>${przystanek.nazwa}</strong> <span style="font-size:0.8em; color:var(--primary-color);">(Twój przystanek)</span>`;
+                    stopNameHtml = `<div style="flex: 1; min-width: 0; padding-right: 15px; word-break: break-word;"><strong>${przystanek.nazwa}</strong> <br><span style="font-size:0.8em; color:var(--primary-color);">(Twój przystanek)</span></div>`;
+                    timeHtml = `<div style="flex-shrink: 0; white-space: nowrap; text-align: right; color: var(--primary-color); font-weight: bold;">${timeString}</div>`;
                 } else {
-                    div.innerText = przystanek.nazwa;
+                    stopNameHtml = `<div style="flex: 1; min-width: 0; padding-right: 15px; word-break: break-word;">${przystanek.nazwa}</div>`;
+                    timeHtml = `<div style="flex-shrink: 0; white-space: nowrap; text-align: right; color: var(--text-secondary);"><span style="font-size: 0.85em; margin-right: 8px;">+ ${accumulatedMinutes} min</span><strong style="color: var(--text-main);">${timeString}</strong></div>`;
                 }
+                div.innerHTML = `${stopNameHtml}${timeHtml}`;
                 
-                // Po kliknięciu w przystanek z listy, przejdź od razu do jego rozkładu!
                 div.onclick = () => {
                     closeJourneyModal();
                     const docelowyInputId = city === 'T' ? 'input-torun' : 'input-bydgoszcz';
@@ -1061,9 +1086,27 @@
                 };
                 
                 timeline.appendChild(div);
+                
+                // MĄDRE WYLICZANIE CZASU Z GTFS NA NASTĘPNY PRZYSTANEK
+                if (index < remainingStops.length - 1) {
+                    let nextStop = remainingStops[index + 1];
+                    let idA = String(przystanek.kod).replace(/\D/g, '').replace(/^0+/, '');
+                    let idB = String(nextStop.kod).replace(/\D/g, '').replace(/^0+/, '');
+                    let segmentKey = `${idA}-${idB}`;
+                    
+                    let timeToAdd = 2; // Czas awaryjny (gdyby skrypt nie znalazł odcinka)
+                    
+                    if (czasyOdcinkow[line] && czasyOdcinkow[line][segmentKey] !== undefined) {
+                        timeToAdd = czasyOdcinkow[line][segmentKey];
+                    } else if (czasyOdcinkow['GLOBAL'] && czasyOdcinkow['GLOBAL'][segmentKey] !== undefined) {
+                        timeToAdd = czasyOdcinkow['GLOBAL'][segmentKey];
+                    }
+                    
+                    accumulatedMinutes += timeToAdd; 
+                }
             });
 
-            document.getElementById('journey-modal').style.display = 'flex';
+            document.getElementById('journey-modal').style.display = 'block'; // Zmiana na block wg wczorajszej poprawki!
         }
     </script>
 </body>
