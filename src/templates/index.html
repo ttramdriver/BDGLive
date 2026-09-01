@@ -103,6 +103,7 @@
         .modal-content {
             background: var(--surface-color); border-radius: 12px; 
             width: 100%; max-width: 600px;
+            /* Naturalne centrowanie bez ucinania wysokości: */
             margin: 40px auto; 
             padding: 30px; position: relative; box-sizing: border-box;
         }
@@ -343,11 +344,7 @@
         <header class="header-container">
             <span class="header-subtitle">Komunikacja miejska i podmiejska na żywo</span>
             <article class="infobox-technical-issues"> 
-<<<<<<< Updated upstream
-                <span class="infobox-technical-issues-title"> 
-=======
-                                 <span class="infobox-technical-issues-title"> 
->>>>>>> Stashed changes
+                 <span class="infobox-technical-issues-title"> 
                     <span style="margin-left: -1px">
                         <svg viewBox="0 0 25 25" style="fill:#ffffff; margin-top: -3px; height: 25px; width: 25px;" preserveAspectRatio="xMidYMin slice" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="nonzero"
@@ -357,8 +354,11 @@
                     <span style="margin-left: 5px">UWAGA! Zmiany tras komunikacji miejskiej w Bydgoszczy!</span>
                 </span> 
 
-                test
-                <a href="https://zdmikp.bydgoszcz.pl/pl/drogi-miejskie/9391-rozpoczyna-sie-remont-torowiska-na-rondzie-fordonskim">stronie ZDMiKP Bydgoszcz</a>.
+                Zmiany dla linii autobusowych 77 i 33N!
+                Od piątku (28 sierpnia) tymczasowe przystanki pn. Podmiejska/Kruszyńska zlokalizowane na ul. Krogulczej, zostaną czasowo zawieszone. W zamian uruchomione zostaną przystanki pn. Kruszyńska/Podmiejska zlokalizowane na ul. Kruszyńskiej w rejonie posesji nr 52. Przystanki będą obsługiwane przez linie nr 77 i 35N.
+
+Dodatkowo dla linii nr 77 i 35N od wtorku (1 września) uruchomione zostaną dodatkowe przystanki pn. Stalowa/Ołowiana, zlokalizowane na ul. Stalowej przed skrzyżowaniem z ul. Ołowianą.
+                <a href="https://zdmikp.bydgoszcz.pl/pl/transport/9515-zmiany-na-osowej-gorze">stronie ZDMiKP Bydgoszcz</a>.
             </article> 
         </header> 
 
@@ -494,7 +494,7 @@
 
         /* --- LOGIKA DLA MODALI --- */
         function openTimetablesModal() {
-            document.getElementById('timetables-modal').style.display = 'block'; // Zmiana na block
+            document.getElementById('timetables-modal').style.display = 'block';
             document.getElementById('modal-city-select').style.display = 'flex';
             document.getElementById('modal-browser-content').style.display = 'none';
         }
@@ -1069,6 +1069,7 @@
                     stopNameHtml = `<div style="flex: 1; min-width: 0; padding-right: 15px; word-break: break-word;">${przystanek.nazwa}</div>`;
                     timeHtml = `<div style="flex-shrink: 0; white-space: nowrap; text-align: right; color: var(--text-secondary);"><span style="font-size: 0.85em; margin-right: 8px;">+ ${accumulatedMinutes} min</span><strong style="color: var(--text-main);">${timeString}</strong></div>`;
                 }
+
                 div.innerHTML = `${stopNameHtml}${timeHtml}`;
                 
                 div.onclick = () => {
