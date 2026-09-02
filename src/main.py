@@ -345,7 +345,6 @@ def api_planer():
     date = request.args.get('date', '')
     time = request.args.get('time', '').strip()
     
-    # Bezpieczne formatowanie czasu pod wymagania OTP v2 (HH:MM:SS)
     if time and len(time.split(':')) == 2:
         time = f"{time}:00"
     
@@ -356,11 +355,9 @@ def api_planer():
         if ':' in place_str:
             prefix = place_str.split(':')[0].strip()
             
-            # 1. Adres Nominatim (zwracany od razu jako ciąg "lat,lon")
             if ',' in prefix and prefix.replace(',', '').replace('.', '').replace('-', '').isdigit():
                 return prefix
                 
-            # 2. Generowanie place_id dokładnie pod graf OTP (bez ucinania zer)
             litera = prefix[0].upper() if prefix else ''
             reszta_kodu = prefix[1:] if len(prefix) > 1 else prefix
             
@@ -369,7 +366,6 @@ def api_planer():
             elif litera == 'P': return f"2:{reszta_kodu}"
             return prefix
                     
-        # 3. Awaryjne szukanie po samej nazwie "z palca"
         nazwa_input = place_str.split('(')[0].strip().lower()
         for stop_id, nazwa_z_bazy in PRZYSTANKI.items():
             czysta_nazwa = nazwa_z_bazy.split('(')[0].strip().lower()
@@ -393,7 +389,6 @@ def api_planer():
             }
         }), 400
 
-    # Natywne zapytanie wspierające format String dla fromPlace i toPlace
     graphql_query = """
     query PlanQuery($fromPlace: String!, $toPlace: String!, $date: String!, $time: String!) {
       plan(

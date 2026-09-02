@@ -5,14 +5,12 @@ import statistics
 
 def time_to_minutes(time_str):
     try:
-        # GTFS pozwala na godziny > 24 (np. 25:12 to 1:12 w nocy)
         h, m, s = map(int, time_str.strip().split(':'))
         return h * 60 + m + s / 60.0
     except:
         return 0
 
 def wyciagnij_cyfry(text):
-    # Wyciąga same cyfry i usuwa zera wiodące (np. "B01026" -> "1026")
     return ''.join(c for c in str(text) if c.isdigit()).lstrip('0')
 
 def generuj():
@@ -47,7 +45,6 @@ def generuj():
         if not line or line == 'UNKNOWN':
             continue
 
-        # Sortujemy przystanki zgodnie z kolejnością na trasie
         stops.sort(key=lambda x: x['seq'])
 
         for i in range(len(stops) - 1):
@@ -58,7 +55,6 @@ def generuj():
 
             diff = max(0, stops[i+1]['time'] - stops[i]['time'])
             
-            # Zabezpieczenie przed błędami w GTFS (np. przerwa w kursie > 40 min)
             if diff < 40:
                 segment_key = f"{id_a}-{id_b}"
                 travel_times[line][segment_key].append(diff)
@@ -67,14 +63,12 @@ def generuj():
     print("Zapisywanie wyników do czasy_odcinkow.json...")
     final_times = {}
 
-    # Średnie czasy per konkretna linia
     for line, segments in travel_times.items():
         final_times[line] = {}
         for segment, times in segments.items():
             if times:
                 final_times[line][segment] = round(statistics.median(times))
 
-    # Czas zapasowy dla wszystkich odcinków (gdyby skrypt nie znalazł linii)
     final_times['GLOBAL'] = {}
     for segment, times in global_times.items():
         if times:
