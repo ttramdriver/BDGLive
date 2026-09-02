@@ -345,66 +345,60 @@ def api_planer():
     date = request.args.get('date', '')
     time = request.args.get('time', '').strip()
     
+    # Bezpieczne formatowanie czasu pod wymagania OTP v2 (HH:MM:SS)
     if time and len(time.split(':')) == 2:
         time = f"{time}:00"
     
     def resolve_place(place_str):
         if not place_str:
-            return place_str
+            return None
             
         if ':' in place_str:
             prefix = place_str.split(':')[0].strip()
             
+            # 1. Adres Nominatim (zwracany od razu jako ciąg "lat,lon")
             if ',' in prefix and prefix.replace(',', '').replace('.', '').replace('-', '').isdigit():
                 return prefix
                 
-            mozliwe_klucze = [prefix]
-            if prefix and prefix[0].isalpha():
-                mozliwe_klucze.append(prefix[1:])
-                
-            for klucz in mozliwe_klucze:
-                if klucz in WSPOLRZEDNE:
-                    lat = WSPOLRZEDNE[klucz].get('lat')
-                    lon = WSPOLRZEDNE[klucz].get('lon')
-                    if lat and lon:
-                        return f"{lat},{lon}"
-                    
-        for stop_id, coords in WSPOLRZEDNE.items():
-            nazwy_do_sprawdzenia = [
-                PRZYSTANKI.get(stop_id, ''),
-                PRZYSTANKI.get(f"B{stop_id}", ''),
-                PRZYSTANKI.get(f"T{stop_id}", ''),
-                PRZYSTANKI.get(f"P{stop_id}", '')
-            ]
+            # 2. Generowanie place_id dokładnie pod graf OTP (bez ucinania zer)
+            litera = prefix[0].upper() if prefix else ''
+            reszta_kodu = prefix[1:] if len(prefix) > 1 else prefix
             
-            for nazwa_z_bazy in nazwy_do_sprawdzenia:
-                if nazwa_z_bazy:
-                    czysta_nazwa = nazwa_z_bazy.split('(')[0].strip().lower()
-                    czysty_input = place_str.split('(')[0].strip().lower()
+            if litera == 'B': return f"1:{reszta_kodu}"
+            elif litera == 'T': return f"3:{reszta_kodu}"
+            elif litera == 'P': return f"2:{reszta_kodu}"
+            return prefix
                     
-                    if czysty_input == czysta_nazwa or place_str.lower() == nazwa_z_bazy.lower():
-                        lat = coords.get('lat')
-                        lon = coords.get('lon')
-                        if lat and lon:
-                            return f"{lat},{lon}"
+        # 3. Awaryjne szukanie po samej nazwie "z palca"
+        nazwa_input = place_str.split('(')[0].strip().lower()
+        for stop_id, nazwa_z_bazy in PRZYSTANKI.items():
+            czysta_nazwa = nazwa_z_bazy.split('(')[0].strip().lower()
+            if nazwa_input == czysta_nazwa or place_str.lower() == nazwa_z_bazy.lower():
+                litera = stop_id[0].upper()
+                reszta_kodu = stop_id[1:]
+                if litera == 'B': return f"1:{reszta_kodu}"
+                elif litera == 'T': return f"3:{reszta_kodu}"
+                elif litera == 'P': return f"2:{reszta_kodu}"
+                return stop_id
                             
-        return place_str
+        return None
 
-    from_coords = resolve_place(from_place)
-    to_coords = resolve_place(to_place)
+    from_place_id = resolve_place(from_place)
+    to_place_id = resolve_place(to_place)
 
-    if ',' not in from_coords or ',' not in to_coords:
+    if not from_place_id or not to_place_id:
         return jsonify({
             'error': {
-                'msg': f"Nie udało się odnaleźć współrzędnych dla podanych lokalizacji. (Skąd: {from_place}, Dokąd: {to_place})"
+                'msg': f"Nie udało się zidentyfikować lokalizacji w bazie. (Skąd: {from_place}, Dokąd: {to_place})"
             }
         }), 400
 
+    # Natywne zapytanie wspierające format String dla fromPlace i toPlace
     graphql_query = """
-    query PlanQuery($fromLat: Float!, $fromLon: Float!, $toLat: Float!, $toLon: Float!, $date: String!, $time: String!) {
+    query PlanQuery($fromPlace: String!, $toPlace: String!, $date: String!, $time: String!) {
       plan(
-        from: { lat: $fromLat, lon: $fromLon }
-        to: { lat: $toLat, lon: $toLon }
+        fromPlace: $fromPlace
+        toPlace: $toPlace
         date: $date
         time: $time
         transportModes: [{mode: TRAM}, {mode: BUS}, {mode: RAIL}]
@@ -432,14 +426,9 @@ def api_planer():
     }
     """
 
-    from_lat, from_lon = map(float, from_coords.split(','))
-    to_lat, to_lon = map(float, to_coords.split(','))
-
     variables = {
-        "fromLat": from_lat,
-        "fromLon": from_lon,
-        "toLat": to_lat,
-        "toLon": to_lon,
+        "fromPlace": from_place_id,
+        "toPlace": to_place_id,
         "date": date,
         "time": time
     }
@@ -448,7 +437,7 @@ def api_planer():
     graphql_url = f"{otp_url.rstrip('/')}/otp/routers/default/index/graphql"
 
     try:
-        print(f"[BiTCityLive] Wysyłam poprawne zapytanie pod: {graphql_url}")
+        print(f"[BiTCityLive] Wysyłam zapytanie GraphQL pod: {graphql_url} \nZmienne: {variables}")
         resp = requests.post(
             graphql_url, 
             json={"query": graphql_query, "variables": variables}, 
@@ -465,6 +454,7 @@ def api_planer():
             
         raw_itineraries = otp_data.get("data", {}).get("plan", {}).get("itineraries", [])
         
+        # Obliczanie przesiadek
         for itin in raw_itineraries:
             transit_legs_count = 0
             for leg in itin.get("legs", []):
