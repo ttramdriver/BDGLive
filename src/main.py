@@ -389,13 +389,17 @@ def api_planer():
             }
         }), 400
 
+    arrive_by_str = request.args.get('arriveBy', 'false').strip().lower()
+    arrive_by = arrive_by_str == 'true'
+
     graphql_query = """
-    query PlanQuery($fromPlace: String!, $toPlace: String!, $date: String!, $time: String!) {
+    query PlanQuery($fromPlace: String!, $toPlace: String!, $date: String!, $time: String!, $arriveBy: Boolean!) {
       plan(
         fromPlace: $fromPlace
         toPlace: $toPlace
         date: $date
         time: $time
+        arriveBy: $arriveBy
         transportModes: [{mode: TRAM}, {mode: BUS}, {mode: RAIL}]
       ) {
         itineraries {
@@ -425,7 +429,8 @@ def api_planer():
         "fromPlace": from_place_id,
         "toPlace": to_place_id,
         "date": date,
-        "time": time
+        "time": time,
+        "arriveBy": arrive_by
     }
 
     otp_url = os.getenv('OTP_URL', 'http://10.1.3.50:8080')
@@ -449,7 +454,6 @@ def api_planer():
             
         raw_itineraries = otp_data.get("data", {}).get("plan", {}).get("itineraries", [])
         
-        # Obliczanie przesiadek
         for itin in raw_itineraries:
             transit_legs_count = 0
             for leg in itin.get("legs", []):

@@ -254,7 +254,7 @@
         .leg-route { font-weight: bold; padding: 2px 6px; border-radius: 4px; background: var(--bg-color); border: 1px solid var(--border-color); }
         
         .datetime-inputs { display: flex; gap: 10px; }
-        .datetime-inputs input { flex: 1; padding: 12px; border: 1px solid var(--border-color); border-radius: 4px; background-color: var(--bg-color); color: var(--text-main); font-size: 1em; box-sizing: border-box; }
+        .datetime-inputs input, .datetime-inputs select { flex: 1; padding: 12px; border: 1px solid var(--border-color); border-radius: 4px; background-color: var(--bg-color); color: var(--text-main); font-size: 1em; box-sizing: border-box; }
         .submit-planner-btn { width: 100%; padding: 15px; background-color: var(--primary-color); color: white; border: none; border-radius: 8px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: opacity 0.2s; }
         .submit-planner-btn:hover { opacity: 0.9; }
     </style>
@@ -284,7 +284,6 @@
         <a href="#" class="menu-link" onclick="openTimetablesModal(); toggleMenu();">Rozkłady jazdy</a>
     </div>
 
-    <!-- OKNO MODALNE ROZKŁADÓW JAZDY -->
     <div id="timetables-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-menu-btn" style="color: var(--text-main);" onclick="closeTimetablesModal()">&times;</button>
@@ -305,7 +304,6 @@
         </div>
     </div>
 
-    <!-- OKNO MODALNE PODGLĄDU TRASY KURSU (kliknięcie odjazdu) -->
     <div id="journey-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-menu-btn" style="color: var(--text-main);" onclick="closeJourneyModal()">&times;</button>
@@ -315,7 +313,6 @@
         </div>
     </div>
 
-    <!-- OKNO MODALNE PLANERA TRAS -->
     <div id="planner-modal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-menu-btn" style="color: var(--text-main);" onclick="closePlannerModal()">&times;</button>
@@ -338,8 +335,12 @@
                     </div>
 
                     <div class="datetime-inputs">
-                        <input type="date" id="planner-date" required title="Data odjazdu">
-                        <input type="time" id="planner-time" required title="Godzina odjazdu">
+                        <select id="planner-arrive-by" title="Sposób planowania">
+                            <option value="false">Odjazd po</option>
+                            <option value="true">Przyjazd na</option>
+                        </select>
+                        <input type="date" id="planner-date" required title="Data odjazdu/przyjazdu">
+                        <input type="time" id="planner-time" required title="Godzina odjazdu/przyjazdu">
                     </div>
                     
                     <button type="submit" class="submit-planner-btn">Szukaj połączenia</button>
@@ -545,12 +546,13 @@ Dodatkowo dla linii nr 77 i 35N od wtorku (1 września) uruchomione zostaną dod
             const to = document.getElementById('planner-to').value;
             const date = document.getElementById('planner-date').value;
             const time = document.getElementById('planner-time').value;
+            const arriveBy = document.getElementById('planner-arrive-by').value;
 
             const resultsDiv = document.getElementById('planner-results');
             resultsDiv.style.display = 'block';
             resultsDiv.innerHTML = `<div class="empty-state">Łączenie z serwerem i szukanie najlepszej trasy...</div>`;
 
-            fetch(`/api/planer?fromPlace=${encodeURIComponent(from)}&toPlace=${encodeURIComponent(to)}&date=${encodeURIComponent(date)}&time=${encodeURIComponent(time)}`)
+            fetch(`/api/planer?fromPlace=${encodeURIComponent(from)}&toPlace=${encodeURIComponent(to)}&date=${encodeURIComponent(date)}&time=${encodeURIComponent(time)}&arriveBy=${arriveBy}`)
                 .then(async res => {
                     const data = await res.json();
                     if (!res.ok) {
